@@ -13,6 +13,8 @@
 		F12C8FD923785D5300582B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12C8FD723785D5300582B05 /* Main.storyboard */; };
 		F12C8FE523785D5300582B05 /* Network_usageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FE423785D5300582B05 /* Network_usageTests.swift */; };
 		F12C8FF023785D5300582B05 /* Network_usageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FEF23785D5300582B05 /* Network_usageUITests.swift */; };
+		F12C8FFE23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */; };
+		F12C900323785E4200582B05 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F12C900223785E4200582B05 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		F12C8FEB23785D5300582B05 /* Network usageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network usageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12C8FEF23785D5300582B05 /* Network_usageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_usageUITests.swift; sourceTree = "<group>"; };
 		F12C8FF123785D5300582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Safari - 10 Nov 2019 at 2248.pdf"; path = "../../../Safari - 10 Nov 2019 at 2248.pdf"; sourceTree = "<group>"; };
+		F12C900023785D9500582B05 /* doc.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = doc.pdf; sourceTree = "<group>"; };
+		F12C900223785E4200582B05 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,9 @@
 		F12C8FD023785D5100582B05 /* Network usage */ = {
 			isa = PBXGroup;
 			children = (
+				F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
+				F12C900123785E4200582B05 /* json */,
+				F12C8FFF23785D8B00582B05 /* docs */,
 				F12C8FD123785D5100582B05 /* AppDelegate.swift */,
 				F12C8FD323785D5100582B05 /* ViewController.swift */,
 				F12C8FD523785D5300582B05 /* Assets.xcassets */,
@@ -123,6 +131,22 @@
 			);
 			path = "Network usageUITests";
 			sourceTree = "<group>";
+		};
+		F12C8FFF23785D8B00582B05 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				F12C900023785D9500582B05 /* doc.pdf */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		F12C900123785E4200582B05 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				F12C900223785E4200582B05 /* data.json */,
+			);
+			path = json;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -230,6 +254,8 @@
 			files = (
 				F12C8FD623785D5300582B05 /* Assets.xcassets in Resources */,
 				F12C8FD923785D5300582B05 /* Main.storyboard in Resources */,
+				F12C8FFE23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */,
+				F12C900323785E4200582B05 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
