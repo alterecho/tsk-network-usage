@@ -12,10 +12,25 @@ enum Errors: Error {
     case decodeError(String)
 }
 
+enum AnyValue: Decodable {
+    case string(String)
+    case int8(Int8)
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let val = try? container.decode(Int8.self) {
+            self = .int8(val)
+        } else if let val = try? container.decode(String.self) {
+            self = .string(val)
+        } else {
+            throw Errors.decodeError("Unknown type")
+        }
+    }
+}
+
 struct UsageResponse: Decodable {
 
     struct Result: Decodable {
-
         struct Field: Decodable {
             let type: String
             let id: String
@@ -45,7 +60,7 @@ struct UsageResponse: Decodable {
 
         let resourceID: String
         let fields: [[String : String]]
-        let records: [[String : String]]
+        let records: [[String : AnyValue]]
         let links: PageLinks
         let limit: Int
         let total: Int
@@ -54,7 +69,7 @@ struct UsageResponse: Decodable {
             case resourceID = "resource_id"
             case fields
             case records
-            case links
+            case links = "_links"
             case limit
             case total
         }
@@ -81,10 +96,6 @@ struct UsageResponse: Decodable {
         success = try container.decode(Bool.self, forKey: .success)
         result = try container.decode(UsageResponse.Result.self, forKey: .result)
     }
-
-
-
-    
 }
 
 
