@@ -1,15 +1,15 @@
 //
-//  Network_usageTests.swift
-//  Network usageTests
+//  Network_UsageTests.swift
+//  Network UsageTests
 //
-//  Created by v.a.jayachandran on 10/11/19.
+//  Created by v.a.jayachandran on 12/11/19.
 //  Copyright © 2019 v.a.jayachandran. All rights reserved.
 //
 
 import XCTest
-@testable import Network_usage
+@testable import Network_Usage
 
-class Network_usageTests: XCTestCase {
+class Network_UsageTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

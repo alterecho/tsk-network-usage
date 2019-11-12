@@ -7,68 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F12C8FD223785D5100582B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FD123785D5100582B05 /* AppDelegate.swift */; };
-		F12C8FD423785D5100582B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FD323785D5100582B05 /* ViewController.swift */; };
-		F12C8FD623785D5300582B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12C8FD523785D5300582B05 /* Assets.xcassets */; };
-		F12C8FD923785D5300582B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12C8FD723785D5300582B05 /* Main.storyboard */; };
-		F12C8FE523785D5300582B05 /* Network_usageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FE423785D5300582B05 /* Network_usageTests.swift */; };
-		F12C8FF023785D5300582B05 /* Network_usageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C8FEF23785D5300582B05 /* Network_usageUITests.swift */; };
-		F12C8FFE23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */; };
-		F12C900323785E4200582B05 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F12C900223785E4200582B05 /* data.json */; };
+		F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9044237A6A9F00582B05 /* AppDelegate.swift */; };
+		F12C9049237A6A9F00582B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9048237A6A9F00582B05 /* ViewController.swift */; };
+		F12C904C237A6A9F00582B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12C904A237A6A9F00582B05 /* Main.storyboard */; };
+		F12C904E237A6AA000582B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12C904D237A6AA000582B05 /* Assets.xcassets */; };
+		F12C9051237A6AA000582B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12C904F237A6AA000582B05 /* LaunchScreen.storyboard */; };
+		F12C905C237A6AA000582B05 /* Network_UsageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C905B237A6AA000582B05 /* Network_UsageTests.swift */; };
+		F12C9067237A6AA000582B05 /* Network_UsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9066237A6AA000582B05 /* Network_UsageUITests.swift */; };
+		F12C907C237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */; };
+		F12C907F237A6C4000582B05 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F12C907E237A6C4000582B05 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F12C8FE123785D5300582B05 /* PBXContainerItemProxy */ = {
+		F12C9058237A6AA000582B05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F12C8FC623785D5100582B05 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F12C8FCD23785D5100582B05;
-			remoteInfo = "Network usage";
+			remoteGlobalIDString = F12C9041237A6A9F00582B05;
+			remoteInfo = "Network Usage";
 		};
-		F12C8FEC23785D5300582B05 /* PBXContainerItemProxy */ = {
+		F12C9063237A6AA000582B05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F12C8FC623785D5100582B05 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F12C8FCD23785D5100582B05;
-			remoteInfo = "Network usage";
+			remoteGlobalIDString = F12C9041237A6A9F00582B05;
+			remoteInfo = "Network Usage";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F12C8FCE23785D5100582B05 /* Network usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F12C8FD123785D5100582B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F12C8FD323785D5100582B05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F12C8FD523785D5300582B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F12C8FD823785D5300582B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F12C8FDA23785D5300582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12C8FDB23785D5300582B05 /* Network_usage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Network_usage.entitlements; sourceTree = "<group>"; };
-		F12C8FE023785D5300582B05 /* Network usageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network usageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F12C8FE423785D5300582B05 /* Network_usageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_usageTests.swift; sourceTree = "<group>"; };
-		F12C8FE623785D5300582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12C8FEB23785D5300582B05 /* Network usageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network usageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F12C8FEF23785D5300582B05 /* Network_usageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_usageUITests.swift; sourceTree = "<group>"; };
-		F12C8FF123785D5300582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Safari - 10 Nov 2019 at 2248.pdf"; path = "../../../Safari - 10 Nov 2019 at 2248.pdf"; sourceTree = "<group>"; };
-		F12C900023785D9500582B05 /* doc.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = doc.pdf; sourceTree = "<group>"; };
-		F12C900223785E4200582B05 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F12C9042237A6A9F00582B05 /* Network Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12C9044237A6A9F00582B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F12C9048237A6A9F00582B05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F12C904B237A6A9F00582B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F12C904D237A6AA000582B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F12C9050237A6AA000582B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F12C9052237A6AA000582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12C9057237A6AA000582B05 /* Network UsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network UsageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12C905B237A6AA000582B05 /* Network_UsageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_UsageTests.swift; sourceTree = "<group>"; };
+		F12C905D237A6AA000582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12C9062237A6AA000582B05 /* Network UsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network UsageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12C9066237A6AA000582B05 /* Network_UsageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_UsageUITests.swift; sourceTree = "<group>"; };
+		F12C9068237A6AA000582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12C9078237A6B2600582B05 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = data.json; path = ../../../../.Trash/data.json; sourceTree = "<group>"; };
+		F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Safari - 10 Nov 2019 at 2248.pdf"; path = "Network usage/Safari - 10 Nov 2019 at 2248.pdf"; sourceTree = SOURCE_ROOT; };
+		F12C907E237A6C4000582B05 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F12C8FCB23785D5100582B05 /* Frameworks */ = {
+		F12C903F237A6A9F00582B05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FDD23785D5300582B05 /* Frameworks */ = {
+		F12C9054237A6AA000582B05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FE823785D5300582B05 /* Frameworks */ = {
+		F12C905F237A6AA000582B05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,127 +82,112 @@
 		F12C8FC523785D5100582B05 = {
 			isa = PBXGroup;
 			children = (
-				F12C8FD023785D5100582B05 /* Network usage */,
-				F12C8FE323785D5300582B05 /* Network usageTests */,
-				F12C8FEE23785D5300582B05 /* Network usageUITests */,
-				F12C8FCF23785D5100582B05 /* Products */,
+				F12C9042237A6A9F00582B05 /* Network Usage.app */,
+				F12C9043237A6A9F00582B05 /* Network Usage */,
+				F12C9057237A6AA000582B05 /* Network UsageTests.xctest */,
+				F12C905A237A6AA000582B05 /* Network UsageTests */,
+				F12C9062237A6AA000582B05 /* Network UsageUITests.xctest */,
+				F12C9065237A6AA000582B05 /* Network UsageUITests */,
 			);
 			sourceTree = "<group>";
 		};
-		F12C8FCF23785D5100582B05 /* Products */ = {
+		F12C9043237A6A9F00582B05 /* Network Usage */ = {
 			isa = PBXGroup;
 			children = (
-				F12C8FCE23785D5100582B05 /* Network usage.app */,
-				F12C8FE023785D5300582B05 /* Network usageTests.xctest */,
-				F12C8FEB23785D5300582B05 /* Network usageUITests.xctest */,
+				F12C907D237A6C4000582B05 /* json */,
+				F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
+				F12C9078237A6B2600582B05 /* data.json */,
+				F12C9044237A6A9F00582B05 /* AppDelegate.swift */,
+				F12C9048237A6A9F00582B05 /* ViewController.swift */,
+				F12C904A237A6A9F00582B05 /* Main.storyboard */,
+				F12C904D237A6AA000582B05 /* Assets.xcassets */,
+				F12C904F237A6AA000582B05 /* LaunchScreen.storyboard */,
+				F12C9052237A6AA000582B05 /* Info.plist */,
 			);
-			name = Products;
+			path = "Network Usage";
 			sourceTree = "<group>";
 		};
-		F12C8FD023785D5100582B05 /* Network usage */ = {
+		F12C905A237A6AA000582B05 /* Network UsageTests */ = {
 			isa = PBXGroup;
 			children = (
-				F12C8FFD23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
-				F12C900123785E4200582B05 /* json */,
-				F12C8FFF23785D8B00582B05 /* docs */,
-				F12C8FD123785D5100582B05 /* AppDelegate.swift */,
-				F12C8FD323785D5100582B05 /* ViewController.swift */,
-				F12C8FD523785D5300582B05 /* Assets.xcassets */,
-				F12C8FD723785D5300582B05 /* Main.storyboard */,
-				F12C8FDA23785D5300582B05 /* Info.plist */,
-				F12C8FDB23785D5300582B05 /* Network_usage.entitlements */,
+				F12C905B237A6AA000582B05 /* Network_UsageTests.swift */,
+				F12C905D237A6AA000582B05 /* Info.plist */,
 			);
-			path = "Network usage";
+			path = "Network UsageTests";
 			sourceTree = "<group>";
 		};
-		F12C8FE323785D5300582B05 /* Network usageTests */ = {
+		F12C9065237A6AA000582B05 /* Network UsageUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F12C8FE423785D5300582B05 /* Network_usageTests.swift */,
-				F12C8FE623785D5300582B05 /* Info.plist */,
+				F12C9066237A6AA000582B05 /* Network_UsageUITests.swift */,
+				F12C9068237A6AA000582B05 /* Info.plist */,
 			);
-			path = "Network usageTests";
+			path = "Network UsageUITests";
 			sourceTree = "<group>";
 		};
-		F12C8FEE23785D5300582B05 /* Network usageUITests */ = {
+		F12C907D237A6C4000582B05 /* json */ = {
 			isa = PBXGroup;
 			children = (
-				F12C8FEF23785D5300582B05 /* Network_usageUITests.swift */,
-				F12C8FF123785D5300582B05 /* Info.plist */,
+				F12C907E237A6C4000582B05 /* data.json */,
 			);
-			path = "Network usageUITests";
-			sourceTree = "<group>";
-		};
-		F12C8FFF23785D8B00582B05 /* docs */ = {
-			isa = PBXGroup;
-			children = (
-				F12C900023785D9500582B05 /* doc.pdf */,
-			);
-			path = docs;
-			sourceTree = "<group>";
-		};
-		F12C900123785E4200582B05 /* json */ = {
-			isa = PBXGroup;
-			children = (
-				F12C900223785E4200582B05 /* data.json */,
-			);
-			path = json;
+			name = json;
+			path = "Network usage/json";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F12C8FCD23785D5100582B05 /* Network usage */ = {
+		F12C9041237A6A9F00582B05 /* Network Usage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F12C8FF423785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usage" */;
+			buildConfigurationList = F12C9069237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network Usage" */;
 			buildPhases = (
-				F12C8FCA23785D5100582B05 /* Sources */,
-				F12C8FCB23785D5100582B05 /* Frameworks */,
-				F12C8FCC23785D5100582B05 /* Resources */,
+				F12C903E237A6A9F00582B05 /* Sources */,
+				F12C903F237A6A9F00582B05 /* Frameworks */,
+				F12C9040237A6A9F00582B05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Network usage";
-			productName = "Network usage";
-			productReference = F12C8FCE23785D5100582B05 /* Network usage.app */;
+			name = "Network Usage";
+			productName = "Network Usage";
+			productReference = F12C9042237A6A9F00582B05 /* Network Usage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F12C8FDF23785D5300582B05 /* Network usageTests */ = {
+		F12C9056237A6AA000582B05 /* Network UsageTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F12C8FF723785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usageTests" */;
+			buildConfigurationList = F12C906C237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network UsageTests" */;
 			buildPhases = (
-				F12C8FDC23785D5300582B05 /* Sources */,
-				F12C8FDD23785D5300582B05 /* Frameworks */,
-				F12C8FDE23785D5300582B05 /* Resources */,
+				F12C9053237A6AA000582B05 /* Sources */,
+				F12C9054237A6AA000582B05 /* Frameworks */,
+				F12C9055237A6AA000582B05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F12C8FE223785D5300582B05 /* PBXTargetDependency */,
+				F12C9059237A6AA000582B05 /* PBXTargetDependency */,
 			);
-			name = "Network usageTests";
-			productName = "Network usageTests";
-			productReference = F12C8FE023785D5300582B05 /* Network usageTests.xctest */;
+			name = "Network UsageTests";
+			productName = "Network UsageTests";
+			productReference = F12C9057237A6AA000582B05 /* Network UsageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F12C8FEA23785D5300582B05 /* Network usageUITests */ = {
+		F12C9061237A6AA000582B05 /* Network UsageUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F12C8FFA23785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usageUITests" */;
+			buildConfigurationList = F12C906F237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network UsageUITests" */;
 			buildPhases = (
-				F12C8FE723785D5300582B05 /* Sources */,
-				F12C8FE823785D5300582B05 /* Frameworks */,
-				F12C8FE923785D5300582B05 /* Resources */,
+				F12C905E237A6AA000582B05 /* Sources */,
+				F12C905F237A6AA000582B05 /* Frameworks */,
+				F12C9060237A6AA000582B05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F12C8FED23785D5300582B05 /* PBXTargetDependency */,
+				F12C9064237A6AA000582B05 /* PBXTargetDependency */,
 			);
-			name = "Network usageUITests";
-			productName = "Network usageUITests";
-			productReference = F12C8FEB23785D5300582B05 /* Network usageUITests.xctest */;
+			name = "Network UsageUITests";
+			productName = "Network UsageUITests";
+			productReference = F12C9062237A6AA000582B05 /* Network UsageUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -214,16 +200,16 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = v.a.jayachandran;
 				TargetAttributes = {
-					F12C8FCD23785D5100582B05 = {
+					F12C9041237A6A9F00582B05 = {
 						CreatedOnToolsVersion = 11.2;
 					};
-					F12C8FDF23785D5300582B05 = {
+					F12C9056237A6AA000582B05 = {
 						CreatedOnToolsVersion = 11.2;
-						TestTargetID = F12C8FCD23785D5100582B05;
+						TestTargetID = F12C9041237A6A9F00582B05;
 					};
-					F12C8FEA23785D5300582B05 = {
+					F12C9061237A6AA000582B05 = {
 						CreatedOnToolsVersion = 11.2;
-						TestTargetID = F12C8FCD23785D5100582B05;
+						TestTargetID = F12C9041237A6A9F00582B05;
 					};
 				};
 			};
@@ -236,37 +222,38 @@
 				Base,
 			);
 			mainGroup = F12C8FC523785D5100582B05;
-			productRefGroup = F12C8FCF23785D5100582B05 /* Products */;
+			productRefGroup = F12C8FC523785D5100582B05;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F12C8FCD23785D5100582B05 /* Network usage */,
-				F12C8FDF23785D5300582B05 /* Network usageTests */,
-				F12C8FEA23785D5300582B05 /* Network usageUITests */,
+				F12C9041237A6A9F00582B05 /* Network Usage */,
+				F12C9056237A6AA000582B05 /* Network UsageTests */,
+				F12C9061237A6AA000582B05 /* Network UsageUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F12C8FCC23785D5100582B05 /* Resources */ = {
+		F12C9040237A6A9F00582B05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12C8FD623785D5300582B05 /* Assets.xcassets in Resources */,
-				F12C8FD923785D5300582B05 /* Main.storyboard in Resources */,
-				F12C8FFE23785D8700582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */,
-				F12C900323785E4200582B05 /* data.json in Resources */,
+				F12C907C237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */,
+				F12C9051237A6AA000582B05 /* LaunchScreen.storyboard in Resources */,
+				F12C904E237A6AA000582B05 /* Assets.xcassets in Resources */,
+				F12C907F237A6C4000582B05 /* data.json in Resources */,
+				F12C904C237A6A9F00582B05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FDE23785D5300582B05 /* Resources */ = {
+		F12C9055237A6AA000582B05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FE923785D5300582B05 /* Resources */ = {
+		F12C9060237A6AA000582B05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,53 +263,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F12C8FCA23785D5100582B05 /* Sources */ = {
+		F12C903E237A6A9F00582B05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12C8FD423785D5100582B05 /* ViewController.swift in Sources */,
-				F12C8FD223785D5100582B05 /* AppDelegate.swift in Sources */,
+				F12C9049237A6A9F00582B05 /* ViewController.swift in Sources */,
+				F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FDC23785D5300582B05 /* Sources */ = {
+		F12C9053237A6AA000582B05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12C8FE523785D5300582B05 /* Network_usageTests.swift in Sources */,
+				F12C905C237A6AA000582B05 /* Network_UsageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12C8FE723785D5300582B05 /* Sources */ = {
+		F12C905E237A6AA000582B05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12C8FF023785D5300582B05 /* Network_usageUITests.swift in Sources */,
+				F12C9067237A6AA000582B05 /* Network_UsageUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F12C8FE223785D5300582B05 /* PBXTargetDependency */ = {
+		F12C9059237A6AA000582B05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F12C8FCD23785D5100582B05 /* Network usage */;
-			targetProxy = F12C8FE123785D5300582B05 /* PBXContainerItemProxy */;
+			target = F12C9041237A6A9F00582B05 /* Network Usage */;
+			targetProxy = F12C9058237A6AA000582B05 /* PBXContainerItemProxy */;
 		};
-		F12C8FED23785D5300582B05 /* PBXTargetDependency */ = {
+		F12C9064237A6AA000582B05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F12C8FCD23785D5100582B05 /* Network usage */;
-			targetProxy = F12C8FEC23785D5300582B05 /* PBXContainerItemProxy */;
+			target = F12C9041237A6A9F00582B05 /* Network Usage */;
+			targetProxy = F12C9063237A6AA000582B05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F12C8FD723785D5300582B05 /* Main.storyboard */ = {
+		F12C904A237A6A9F00582B05 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F12C8FD823785D5300582B05 /* Base */,
+				F12C904B237A6A9F00582B05 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F12C904F237A6AA000582B05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F12C9050237A6AA000582B05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -441,119 +436,130 @@
 			};
 			name = Release;
 		};
-		F12C8FF523785D5300582B05 /* Debug */ = {
+		F12C906A237A6AA000582B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Network usage/Network_usage.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usage/Info.plist";
+				INFOPLIST_FILE = "Network Usage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usage";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-Usage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F12C8FF623785D5300582B05 /* Release */ = {
+		F12C906B237A6AA000582B05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Network usage/Network_usage.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usage/Info.plist";
+				INFOPLIST_FILE = "Network Usage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usage";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-Usage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F12C8FF823785D5300582B05 /* Debug */ = {
+		F12C906D237A6AA000582B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usageTests/Info.plist";
+				INFOPLIST_FILE = "Network UsageTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usageTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-UsageTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Network usage.app/Contents/MacOS/Network usage";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Network Usage.app/Network Usage";
 			};
 			name = Debug;
 		};
-		F12C8FF923785D5300582B05 /* Release */ = {
+		F12C906E237A6AA000582B05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usageTests/Info.plist";
+				INFOPLIST_FILE = "Network UsageTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usageTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-UsageTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Network usage.app/Contents/MacOS/Network usage";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Network Usage.app/Network Usage";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F12C8FFB23785D5300582B05 /* Debug */ = {
+		F12C9070237A6AA000582B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usageUITests/Info.plist";
+				INFOPLIST_FILE = "Network UsageUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usageUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-UsageUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Network usage";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Network Usage";
 			};
 			name = Debug;
 		};
-		F12C8FFC23785D5300582B05 /* Release */ = {
+		F12C9071237A6AA000582B05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Network usageUITests/Info.plist";
+				INFOPLIST_FILE = "Network UsageUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "c.Network-usageUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vjc.Network-UsageUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Network usage";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Network Usage";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -569,29 +575,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F12C8FF423785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usage" */ = {
+		F12C9069237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network Usage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F12C8FF523785D5300582B05 /* Debug */,
-				F12C8FF623785D5300582B05 /* Release */,
+				F12C906A237A6AA000582B05 /* Debug */,
+				F12C906B237A6AA000582B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F12C8FF723785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usageTests" */ = {
+		F12C906C237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network UsageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F12C8FF823785D5300582B05 /* Debug */,
-				F12C8FF923785D5300582B05 /* Release */,
+				F12C906D237A6AA000582B05 /* Debug */,
+				F12C906E237A6AA000582B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F12C8FFA23785D5300582B05 /* Build configuration list for PBXNativeTarget "Network usageUITests" */ = {
+		F12C906F237A6AA000582B05 /* Build configuration list for PBXNativeTarget "Network UsageUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F12C8FFB23785D5300582B05 /* Debug */,
-				F12C8FFC23785D5300582B05 /* Release */,
+				F12C9070237A6AA000582B05 /* Debug */,
+				F12C9071237A6AA000582B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

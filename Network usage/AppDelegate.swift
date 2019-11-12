@@ -1,26 +1,18 @@
 //
 //  AppDelegate.swift
-//  Network usage
+//  Network Usage
 //
-//  Created by v.a.jayachandran on 10/11/19.
+//  Created by v.a.jayachandran on 12/11/19.
 //  Copyright © 2019 v.a.jayachandran. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
