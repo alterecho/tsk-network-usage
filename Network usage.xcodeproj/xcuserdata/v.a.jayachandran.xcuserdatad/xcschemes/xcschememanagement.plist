@@ -4,15 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Network Usage.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>Network usage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>NetworkUsage.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F12C9041237A6A9F00582B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F12C9056237A6AA000582B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F12C9061237A6AA000582B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F165E47A237AA0DD00CC87AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

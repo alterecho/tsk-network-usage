@@ -49,6 +49,15 @@ struct UsageResponse: Decodable {
         let links: PageLinks
         let limit: Int
         let total: Int
+
+        enum CodingKeys: String, CodingKey {
+            case resourceID = "resource_id"
+            case fields
+            case records
+            case links
+            case limit
+            case total
+        }
     }
     
     let help: URL

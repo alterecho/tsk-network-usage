@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Network_Usage
+@testable import NetworkUsage
 
 class Network_UsageTests: XCTestCase {
 
