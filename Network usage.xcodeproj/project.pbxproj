@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10FF6A2237A941A006F0E31 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FF6A1237A941A006F0E31 /* URLs.swift */; };
 		F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9044237A6A9F00582B05 /* AppDelegate.swift */; };
 		F12C9049237A6A9F00582B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9048237A6A9F00582B05 /* ViewController.swift */; };
 		F12C904C237A6A9F00582B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12C904A237A6A9F00582B05 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 		F12C9067237A6AA000582B05 /* Network_UsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9066237A6AA000582B05 /* Network_UsageUITests.swift */; };
 		F12C907C237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */; };
 		F12C907F237A6C4000582B05 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F12C907E237A6C4000582B05 /* data.json */; };
+		F12C9084237A846B00582B05 /* UsageViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9083237A846B00582B05 /* UsageViewProtocols.swift */; };
+		F12C9088237A84D400582B05 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9087237A84D400582B05 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F10FF6A1237A941A006F0E31 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLs.swift; path = "Network usage/URLs.swift"; sourceTree = SOURCE_ROOT; };
 		F12C9042237A6A9F00582B05 /* Network Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12C9044237A6A9F00582B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F12C9048237A6A9F00582B05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,9 +53,10 @@
 		F12C9062237A6AA000582B05 /* Network UsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Network UsageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12C9066237A6AA000582B05 /* Network_UsageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_UsageUITests.swift; sourceTree = "<group>"; };
 		F12C9068237A6AA000582B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12C9078237A6B2600582B05 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = data.json; path = ../../../../.Trash/data.json; sourceTree = "<group>"; };
 		F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Safari - 10 Nov 2019 at 2248.pdf"; path = "Network usage/Safari - 10 Nov 2019 at 2248.pdf"; sourceTree = SOURCE_ROOT; };
 		F12C907E237A6C4000582B05 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F12C9083237A846B00582B05 /* UsageViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageViewProtocols.swift; path = "Network usage/UsageView/UsageViewProtocols.swift"; sourceTree = SOURCE_ROOT; };
+		F12C9087237A84D400582B05 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = "Network Usage/Models.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +101,11 @@
 			children = (
 				F12C907D237A6C4000582B05 /* json */,
 				F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
-				F12C9078237A6B2600582B05 /* data.json */,
 				F12C9044237A6A9F00582B05 /* AppDelegate.swift */,
 				F12C9048237A6A9F00582B05 /* ViewController.swift */,
+				F12C9087237A84D400582B05 /* Models.swift */,
+				F10FF6A1237A941A006F0E31 /* URLs.swift */,
+				F12C9082237A840500582B05 /* UsageView */,
 				F12C904A237A6A9F00582B05 /* Main.storyboard */,
 				F12C904D237A6AA000582B05 /* Assets.xcassets */,
 				F12C904F237A6AA000582B05 /* LaunchScreen.storyboard */,
@@ -133,6 +140,14 @@
 			name = json;
 			path = "Network usage/json";
 			sourceTree = SOURCE_ROOT;
+		};
+		F12C9082237A840500582B05 /* UsageView */ = {
+			isa = PBXGroup;
+			children = (
+				F12C9083237A846B00582B05 /* UsageViewProtocols.swift */,
+			);
+			path = UsageView;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -267,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10FF6A2237A941A006F0E31 /* URLs.swift in Sources */,
+				F12C9084237A846B00582B05 /* UsageViewProtocols.swift in Sources */,
 				F12C9049237A6A9F00582B05 /* ViewController.swift in Sources */,
 				F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */,
+				F12C9088237A84D400582B05 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
