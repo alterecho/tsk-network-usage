@@ -37,18 +37,9 @@ struct UsageResponse: Decodable {
             init(from decoder: Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
                 var urlStr = try container.decode(String.self, forKey: .next)
-                if let url = URL(string: URLs.base + urlStr) {
-                    start = url
-                } else {
-                    throw Errors.decodeError("next decode error")
-                }
+                start = URLs.base.appendingPathComponent(urlStr)
                 urlStr = try container.decode(String.self, forKey: .next)
-
-                if let url = URL(string: URLs.base + urlStr) {
-                    next = url
-                } else {
-                    throw Errors.decodeError("start decode error")
-                }
+                next = URLs.base.appendingPathComponent(urlStr)
             }
         }
 

@@ -11,5 +11,5 @@ import Foundation
 //https://data.gov.sg/"api/action/datastore_s earch?resource_id=a807b7ab-6cad-4aa6- 87d0-e283a7353a0f&limit=5
 
 class URLs {
-    static let base = URL(string: "https://data.gov.sg/")
+    static let base = URL(string: "https://data.gov.sg/")!
 }
