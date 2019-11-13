@@ -31,10 +31,10 @@ class DecodableTests: XCTestCase {
         }
 
 
-        let usageResponse: UsageResponse
+        let usageResponse: Models.UsageResponse
 
         do {
-            usageResponse = try JSONDecoder().decode(UsageResponse.self, from: data)
+            usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
         } catch {
             XCTFail(error.localizedDescription)
             return
