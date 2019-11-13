@@ -24,22 +24,18 @@ class DecodableTests: XCTestCase {
             XCTFail("sample not found")
             return
         }
-
         guard let data = try? Data(contentsOf: url) else {
             XCTFail("data load error")
             return
         }
-
-
         let usageResponse: Models.UsageResponse
-
         do {
             usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
         } catch {
             XCTFail(error.localizedDescription)
             return
         }
-
+        print(usageResponse)
     }
 
 }
