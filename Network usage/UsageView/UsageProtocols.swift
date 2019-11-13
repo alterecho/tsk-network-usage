@@ -25,4 +25,8 @@ protocol UsageAPIWorkerProtocol {
     func fetchUsageData(completion: (Models.UsageResponse.Result?, Error?) -> ())
 }
 
+protocol UsageMappingWorkerProtocol {
+    func records(from response: Models.UsageResponse.Result) -> [Models.UsageRecord]
+}
+
 

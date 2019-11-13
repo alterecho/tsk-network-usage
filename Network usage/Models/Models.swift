@@ -12,16 +12,30 @@ enum Models {
 
     enum AnyValue: Decodable {
         case string(String)
-        case int8(Int8)
+        case int4(Int)
+        case numeric(Double)
 
         init(from decoder: Decoder) throws {
             let container = try decoder.singleValueContainer()
-            if let val = try? container.decode(Int8.self) {
-                self = .int8(val)
+            if let val = try? container.decode(Int.self) {
+                self = .int4(val)
             } else if let val = try? container.decode(String.self) {
                 self = .string(val)
+            } else if let val = try? container.decode(Double.self) {
+                self = .numeric(val)
             } else {
                 throw Errors.decodeError("Unknown type")
+            }
+        }
+
+        var stringValue: String {
+            switch self {
+            case .string(let value):
+                return value
+            case .int4(let value):
+                return String(value)
+            case .numeric(let value):
+                return String(value)
             }
         }
     }
@@ -31,10 +45,10 @@ enum Models {
     }
 
     struct UsageRecord {
-        let volumeOfData: String
-        let year: String
-        let quarter: Quarter
-        let id: Int
+        let volumeOfData: AnyValue?
+        let year: Int?
+        let quarter: Quarter?
+        let id: AnyValue
     }
 
 }

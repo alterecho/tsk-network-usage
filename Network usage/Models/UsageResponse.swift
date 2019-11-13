@@ -49,8 +49,8 @@ extension Models {
             }
 
             let resourceID: String
-            let fields: [[String : String]]
-            let records: [[String : AnyValue]]
+            let fields: [Field]
+            let records: [[ID : AnyValue]]
             let links: PageLinks
             let limit: Int
             let total: Int
