@@ -9,6 +9,7 @@
 import Foundation
 
 class UsageInteractor: UsageInteractorInputProtocol {
+    var output: UsagePresenterInputProtocol?
 
     func load() {
     }

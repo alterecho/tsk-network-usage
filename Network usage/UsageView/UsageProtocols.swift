@@ -9,16 +9,18 @@
 import Foundation
 
 protocol UsageInteractorInputProtocol {
+    var output: UsagePresenterInputProtocol? { get set }
     func load()
     func reachedEndOfPage()
 }
 
-protocol UsageInteractorOutputProtocol {
-    func display()
+protocol UsagePresenterInputProtocol {
+    var output: UsagePresenterOutputProtocol? { get set }
+    func present(records: [Models.UsageRecord])
 }
 
-protocol UsagePresenterOutputProtocol {
-    func update()
+protocol UsagePresenterOutputProtocol: class {
+    func update(vm: UsageViewVM)
 }
 
 protocol UsageAPIWorkerProtocol {

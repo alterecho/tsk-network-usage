@@ -8,10 +8,13 @@
 
 import Foundation
 
-class UsagePresenter: UsageInteractorOutputProtocol {
-    
-    func display() {
+class UsagePresenter: UsagePresenterInputProtocol {
 
+    weak var output: UsagePresenterOutputProtocol?
+
+    func present(records: [Models.UsageRecord]) {
+        let vm = UsageViewVM(records: records)
+        output?.update(vm: vm)
     }
     
 }
