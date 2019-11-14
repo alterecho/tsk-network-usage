@@ -9,8 +9,24 @@
 import Foundation
 
 class UsageAPIWorker: UsageAPIWorkerProtocol {
-    func fetchUsageData(completion: (Models.UsageResponse.Result?, Error?) -> ()) {
-        
+    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) {
+        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
+            return
+        }
+        let request = URLRequest(url: url)
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
+                    completionHandler(usageResponse, nil)
+                } catch {
+                    completionHandler(nil, error)
+                }
+            } else {
+                completionHandler(nil, Errors.fileNotFound(error?.localizedDescription ?? "file not found"))
+            }
+        }.resume()
     }
 
     

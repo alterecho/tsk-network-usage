@@ -24,7 +24,7 @@ protocol UsagePresenterOutputProtocol: class {
 }
 
 protocol UsageAPIWorkerProtocol {
-    func fetchUsageData(completion: (Models.UsageResponse.Result?, Error?) -> ())
+    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ())
 }
 
 protocol UsageMappingWorkerProtocol {

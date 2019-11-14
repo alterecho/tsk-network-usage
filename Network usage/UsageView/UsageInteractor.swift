@@ -10,14 +10,18 @@ import Foundation
 
 class UsageInteractor: UsageInteractorInputProtocol {
     var output: UsagePresenterInputProtocol?
+    let apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker()
+    let mappingWorker: UsageMappingWorker = UsageMappingWorker()
 
     func load() {
-
+        apiWorker.fetchUsageData { [weak self] (response: Models.UsageResponse?, error: Error?) in
+            if let response = response {
+                let records = self?.mappingWorker.records(from: response.result)
+                print(records)
+            }
+        }
     }
 
     func reachedEndOfPage() {
     }
-
-
-
 }
