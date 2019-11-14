@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UsageInteractorInputProtocol {
+protocol UsageInteractorInputProtocol: class {
     var output: UsagePresenterInputProtocol? { get set }
     func load()
     func reachedEndOfPage()

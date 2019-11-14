@@ -16,15 +16,16 @@
 		F12C907F237A6C4000582B05 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F12C907E237A6C4000582B05 /* data.json */; };
 		F12C9084237A846B00582B05 /* UsageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C9083237A846B00582B05 /* UsageProtocols.swift */; };
 		F165E485237AA0E800CC87AA /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FF6A3237A9829006F0E31 /* DecodableTests.swift */; };
-		F1A1ED7E237BFE98003CFF99 /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */; };
 		F1A1ED80237BFEAF003CFF99 /* UsageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */; };
 		F1A1ED82237BFEE6003CFF99 /* UsagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */; };
-		F1A1ED84237BFEF0003CFF99 /* UsageAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED83237BFEF0003CFF99 /* UsageAPIWorker.swift */; };
 		F1A1ED86237C0273003CFF99 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED85237C0273003CFF99 /* Errors.swift */; };
 		F1A1ED8C237C0355003CFF99 /* UsageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED8A237C0355003CFF99 /* UsageResponse.swift */; };
 		F1A1ED8D237C0355003CFF99 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED8B237C0355003CFF99 /* Models.swift */; };
-		F1A1ED8F237C1A83003CFF99 /* UsageMappingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED8E237C1A83003CFF99 /* UsageMappingWorker.swift */; };
 		F1A1ED91237C5207003CFF99 /* UsageViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED90237C5207003CFF99 /* UsageViewVM.swift */; };
+		F1A1ED95237C547C003CFF99 /* UsageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED94237C547C003CFF99 /* UsageConfigurator.swift */; };
+		F1A1ED99237C549D003CFF99 /* UsageAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */; };
+		F1A1ED9A237C549D003CFF99 /* UsageMappingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */; };
+		F1A1ED9B237C555F003CFF99 /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +59,13 @@
 		F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageViewController.swift; path = "Network usage/UsageView/UsageViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageInteractor.swift; path = "Network usage/UsageView/UsageInteractor.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsagePresenter.swift; path = "Network usage/UsageView/UsagePresenter.swift"; sourceTree = SOURCE_ROOT; };
-		F1A1ED83237BFEF0003CFF99 /* UsageAPIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageAPIWorker.swift; path = "Network usage/UsageView/UsageAPIWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED85237C0273003CFF99 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = "Network usage/Errors.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED8A237C0355003CFF99 /* UsageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageResponse.swift; path = "Network usage/Models/UsageResponse.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED8B237C0355003CFF99 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = "Network usage/Models/Models.swift"; sourceTree = SOURCE_ROOT; };
-		F1A1ED8E237C1A83003CFF99 /* UsageMappingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageMappingWorker.swift; path = "Network usage/UsageView/UsageMappingWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED90237C5207003CFF99 /* UsageViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageViewVM.swift; path = "Network usage/UsageView/UsageViewVM.swift"; sourceTree = SOURCE_ROOT; };
+		F1A1ED94237C547C003CFF99 /* UsageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageConfigurator.swift; path = "Network usage/UsageView/UsageConfigurator.swift"; sourceTree = SOURCE_ROOT; };
+		F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageAPIWorker.swift; path = "Network usage/UsageView/workers/UsageAPIWorker.swift"; sourceTree = SOURCE_ROOT; };
+		F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageMappingWorker.swift; path = "Network usage/UsageView/workers/UsageMappingWorker.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +148,11 @@
 			children = (
 				F12C9083237A846B00582B05 /* UsageProtocols.swift */,
 				F1A1ED90237C5207003CFF99 /* UsageViewVM.swift */,
-				F1A1ED8E237C1A83003CFF99 /* UsageMappingWorker.swift */,
+				F1A1ED94237C547C003CFF99 /* UsageConfigurator.swift */,
 				F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */,
 				F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */,
-				F1A1ED83237BFEF0003CFF99 /* UsageAPIWorker.swift */,
 				F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */,
+				F1A1ED96237C548F003CFF99 /* workers */,
 			);
 			path = UsageView;
 			sourceTree = "<group>";
@@ -171,6 +173,15 @@
 				F1A1ED8A237C0355003CFF99 /* UsageResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F1A1ED96237C548F003CFF99 /* workers */ = {
+			isa = PBXGroup;
+			children = (
+				F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */,
+				F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */,
+			);
+			path = workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,14 +289,16 @@
 			files = (
 				F1A1ED8D237C0355003CFF99 /* Models.swift in Sources */,
 				F1A1ED91237C5207003CFF99 /* UsageViewVM.swift in Sources */,
+				F1A1ED9A237C549D003CFF99 /* UsageMappingWorker.swift in Sources */,
 				F10FF6A2237A941A006F0E31 /* URLs.swift in Sources */,
-				F1A1ED8F237C1A83003CFF99 /* UsageMappingWorker.swift in Sources */,
 				F12C9084237A846B00582B05 /* UsageProtocols.swift in Sources */,
 				F1A1ED82237BFEE6003CFF99 /* UsagePresenter.swift in Sources */,
+				F1A1ED95237C547C003CFF99 /* UsageConfigurator.swift in Sources */,
 				F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */,
+				F1A1ED99237C549D003CFF99 /* UsageAPIWorker.swift in Sources */,
 				F1A1ED86237C0273003CFF99 /* Errors.swift in Sources */,
-				F1A1ED84237BFEF0003CFF99 /* UsageAPIWorker.swift in Sources */,
 				F1A1ED8C237C0355003CFF99 /* UsageResponse.swift in Sources */,
+				F1A1ED9B237C555F003CFF99 /* UsageViewController.swift in Sources */,
 				F1A1ED80237BFEAF003CFF99 /* UsageInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A1ED7E237BFE98003CFF99 /* UsageViewController.swift in Sources */,
 				F165E485237AA0E800CC87AA /* DecodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
