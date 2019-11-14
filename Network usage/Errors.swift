@@ -10,4 +10,6 @@ import Foundation
 
 enum Errors: Error {
     case decodeError(String)
+    case fileNotFound(String)
+    case invalidData
 }
