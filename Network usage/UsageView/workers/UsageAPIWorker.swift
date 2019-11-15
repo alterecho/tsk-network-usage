@@ -10,6 +10,7 @@ import Foundation
 
 class UsageAPIWorker: UsageAPIWorkerProtocol {
     func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) {
+        
         guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
             return
         }
@@ -19,12 +20,19 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
             if let data = data {
                 do {
                     let usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
-                    completionHandler(usageResponse, nil)
+                    DispatchQueue.main.async {
+                        completionHandler(usageResponse, nil)
+                    }
                 } catch {
-                    completionHandler(nil, error)
+                    DispatchQueue.main.async {
+                        completionHandler(nil, error)
+                    }
                 }
             } else {
-                completionHandler(nil, Errors.fileNotFound(error?.localizedDescription ?? "file not found"))
+                DispatchQueue.main.async {
+                    completionHandler(nil, Errors.fileNotFound(error?.localizedDescription ?? "file not found"))
+                }
+
             }
         }.resume()
     }

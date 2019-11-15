@@ -18,10 +18,25 @@ extension Models {
             case numeric
         }
 
+        /// Known IDs
         enum ID: String, Decodable {
-            case id
+            case id = "_id"
             case quarter
             case dataVolume = "volume_of_mobile_data"
+
+            init(from decoder: Decoder) throws {
+                do {
+                    let container = try decoder.singleValueContainer()
+                    let string = try container.decode(String.self)
+                    if let id = ID(rawValue: string) {
+                        self = id
+                    } else {
+                        throw Errors.decodeError("unable to init ID with rawValue \(string)")
+                    }
+                } catch {
+                    throw error
+                }
+            }
         }
 
         struct Result: Decodable {
@@ -50,7 +65,7 @@ extension Models {
 
             let resourceID: String
             let fields: [Field]
-            let records: [[ID : AnyValue]]
+            let records: [Record]
             let links: PageLinks
             let limit: Int
             let total: Int
@@ -62,6 +77,38 @@ extension Models {
                 case links = "_links"
                 case limit
                 case total
+            }
+
+            typealias Record = [ID : AnyValue]
+
+            init(from decoder: Decoder) throws {
+                do {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    resourceID = try container.decode(String.self, forKey: .resourceID)
+                    fields = try container.decode([Field].self, forKey: .fields)
+
+                    // manually decode array of dictionaries and form dictionary array of [ID : AnyValue]
+                    let dictArray = try container.decode([[String : AnyValue]].self, forKey: .records)
+                    var records = [Record]()
+                    dictArray.forEach { dict in
+                        var record = Record()
+                        dict.forEach { arg in
+                            if let id = ID(rawValue: arg.key) {
+                                record[id] = arg.value
+                            } else {
+
+                            }
+                        }
+                        records.append(record)
+                    }
+                    self.records = records
+                    
+                    links = try container.decode(PageLinks.self, forKey: .links)
+                    limit = try container.decode(Int.self, forKey: .limit)
+                    total = try container.decode(Int.self, forKey: .total)
+                } catch {
+                    throw error
+                }
             }
         }
 

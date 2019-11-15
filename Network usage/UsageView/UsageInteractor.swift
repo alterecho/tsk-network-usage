@@ -19,11 +19,11 @@ class UsageInteractor: UsageInteractorInputProtocol {
                 if let records = self?.mappingWorker.records(from: response.result) {
                     print(records)
                 } else {
-                    print()
+                    self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "Unable to map records")
                 }
 
             } else {
-                print(error?.localizedDescription ?? "unknown error")
+                self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
             }
         }
     }

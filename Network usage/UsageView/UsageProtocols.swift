@@ -14,7 +14,7 @@ protocol UsageInteractorInputProtocol: class {
     func reachedEndOfPage()
 }
 
-protocol UsagePresenterInputProtocol {
+protocol UsagePresenterInputProtocol: class {
     var output: UsagePresenterOutputProtocol? { get set }
     func present(records: [Models.UsageRecord])
     func showAlert(title: String, message: String)

@@ -25,7 +25,6 @@ class AlertSystem: UIViewController {
         }
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             window = nil
-            AlertSystem.alert(title: title, message: message)
         }
         alertViewController.addAction(okAction)
         window?.rootViewController = viewController

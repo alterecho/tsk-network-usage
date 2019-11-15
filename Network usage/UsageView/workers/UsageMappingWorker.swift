@@ -11,9 +11,10 @@ import Foundation
 class UsageMappingWorker: UsageMappingWorkerProtocol {
     func records(from response: Models.UsageResponse.Result) -> [Models.UsageRecord] {
 //        let fieldsInResponse = response.fields
-        let recordsInResponse = response.records
+
         var records = [Models.UsageRecord]()
-        recordsInResponse.forEach { (respRecord: [Models.UsageResponse.ID: Models.AnyValue]) in
+        let recordsInResponse = response.records
+        recordsInResponse.forEach { (respRecord: Models.UsageResponse.Result.Record) in
 
             if let id = respRecord[.id] {
                 let record = Models.UsageRecord(volumeOfData: respRecord[Models.UsageResponse.ID.dataVolume],

@@ -15,6 +15,7 @@ class UsageConfigurator {
 
         interactor.output = presenter
         viewController.output = interactor
+        presenter.output = viewController
         
     }
 }
