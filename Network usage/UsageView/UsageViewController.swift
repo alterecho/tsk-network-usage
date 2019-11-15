@@ -30,4 +30,8 @@ extension UsageViewController: UsagePresenterOutputProtocol {
     func update(vm: UsageViewVM) {
 
     }
+
+    func showAlert(title: String, message: String) {
+        AlertSystem.alert(title: title, message: message)
+    }
 }

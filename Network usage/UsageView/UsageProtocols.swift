@@ -17,10 +17,12 @@ protocol UsageInteractorInputProtocol: class {
 protocol UsagePresenterInputProtocol {
     var output: UsagePresenterOutputProtocol? { get set }
     func present(records: [Models.UsageRecord])
+    func showAlert(title: String, message: String)
 }
 
 protocol UsagePresenterOutputProtocol: class {
     func update(vm: UsageViewVM)
+    func showAlert(title: String, message: String)
 }
 
 protocol UsageAPIWorkerProtocol {

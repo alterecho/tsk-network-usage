@@ -16,8 +16,14 @@ class UsageInteractor: UsageInteractorInputProtocol {
     func load() {
         apiWorker.fetchUsageData { [weak self] (response: Models.UsageResponse?, error: Error?) in
             if let response = response {
-                let records = self?.mappingWorker.records(from: response.result)
-                print(records)
+                if let records = self?.mappingWorker.records(from: response.result) {
+                    print(records)
+                } else {
+                    print()
+                }
+
+            } else {
+                print(error?.localizedDescription ?? "unknown error")
             }
         }
     }

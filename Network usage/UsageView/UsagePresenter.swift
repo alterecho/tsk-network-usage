@@ -9,12 +9,15 @@
 import Foundation
 
 class UsagePresenter: UsagePresenterInputProtocol {
-
     weak var output: UsagePresenterOutputProtocol?
 
     func present(records: [Models.UsageRecord]) {
         let vm = UsageViewVM(records: records)
         output?.update(vm: vm)
+    }
+
+    func showAlert(title: String, message: String) {
+        output?.showAlert(title: title, message: message)
     }
     
 }
