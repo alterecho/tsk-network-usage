@@ -16,6 +16,8 @@ extension Models {
             case int4
             case text
             case numeric
+
+
         }
 
         /// Known IDs
@@ -85,18 +87,21 @@ extension Models {
                 do {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
                     resourceID = try container.decode(String.self, forKey: .resourceID)
-                    fields = try container.decode([Field].self, forKey: .fields)
-
+                    let fields = try container.decode([Field].self, forKey: .fields)
+                    self.fields = fields
                     // manually decode array of dictionaries and form dictionary array of [ID : AnyValue]
                     let dictArray = try container.decode([[String : AnyValue]].self, forKey: .records)
                     var records = [Record]()
-                    dictArray.forEach { dict in
+                    try dictArray.forEach { dict in
                         var record = Record()
-                        dict.forEach { arg in
+                        try dict.forEach { arg throws in
                             if let id = ID(rawValue: arg.key) {
-                                record[id] = arg.value
+                                let field = fields.first { (field) -> Bool in
+                                    return field.id == id
+                                }
+                                record[id] = try field?.type.convert(value: arg.value)
                             } else {
-
+                                throw Errors.decodeError("Unable to form ID from \(arg.key)")
                             }
                         }
                         records.append(record)
@@ -134,8 +139,50 @@ extension Models {
             result = try container.decode(UsageResponse.Result.self, forKey: .result)
         }
     }
-    
 }
 
+extension Models.UsageResponse.DataType {
+    /// Transforms the given value according to the DataType
+    /// - Parameter value: the value to be transformed
+    func convert(value: Models.AnyValue) throws -> Models.AnyValue {
+        switch self {
+        case .int4:
+            switch value {
+            case .int4:
+                return value
+            case .numeric(let numericValue):
+                return .int4(Int(numericValue))
+            case .string(let strValue):
+                if let int = Int(strValue) {
+                    return .int4(int)
+                } else {
+                    throw Errors.conversionError("unable to convert \(strValue) to Int")
+                }
+            }
+        case .text:
+            switch value {
+            case .int4(let int):
+                return .string(String(int))
+            case .numeric(let numericValue):
+                return .string(String(numericValue))
+            case .string(let strValue):
+                return .string(strValue)
+            }
+        case .numeric:
+            switch value {
+            case .int4(let int):
+                return .numeric(Double(int))
+            case .numeric(let numericValue):
+                return .numeric(numericValue)
+            case .string(let strValue):
+                if let double = Double(strValue) {
+                    return .numeric(double)
+                } else {
+                    throw Errors.conversionError("unable to convert \(strValue) to Double")
+                }
 
+            }
+        }
+    }
+}
 
