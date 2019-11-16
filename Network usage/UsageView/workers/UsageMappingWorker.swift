@@ -20,12 +20,18 @@ class UsageMappingWorker: UsageMappingWorkerProtocol {
 
         convertedResponseRecords.forEach { dict in
             /// add record only if it has an ID ("_id")
-            if let id = dict[.id] {
-                let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume],
-                                                year: nil,
-                                                quarter: nil,
-                                                id: id)
-                records.append(record)
+            if let id = dict[.id], let quarterValue = dict[Models.UsageResponse.ID.quarter] {
+                do {
+                    let date = try Models.Date(value: quarterValue)
+                    let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume],
+                                                    date: date,
+                                                    id: id)
+                    records.append(record)
+                } catch {
+
+                }
+                } else {
+
             }
 
         }

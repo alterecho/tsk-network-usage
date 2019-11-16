@@ -51,14 +51,37 @@ enum Models {
 //        }
     }
 
-    enum Quarter {
-        case q1, q2, q3, q4
+    struct Date {
+        let quarter: Int
+        let year: Int
+        init(string: String) throws {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-QQQ"
+
+            guard let date = formatter.date(from: string) else {
+                throw Errors.decodeError("Unable to decode date from string \(string)")
+            }
+            formatter.dateFormat = "Q"
+            guard let quarter = Int(formatter.string(from: date)) else {
+                throw Errors.decodeError("Unable to parse quarter from \(string)")
+            }
+            year = Calendar.current.component(.year, from: date)
+            self.quarter = quarter
+        }
+
+        init(value: Models.AnyValue) throws {
+            switch value {
+            case .string(let str):
+                try self.init(string: str)
+            default:
+                throw Errors.decodeError("Unable to init Date from \(value)")
+            }
+        }
     }
 
     struct UsageRecord {
         let volumeOfData: AnyValue?
-        let year: Int?
-        let quarter: Quarter?
+        let date: Date?
         let id: AnyValue
     }
 
