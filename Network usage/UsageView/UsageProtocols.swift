@@ -30,7 +30,7 @@ protocol UsageAPIWorkerProtocol {
 }
 
 protocol UsageMappingWorkerProtocol {
-    func records(from response: Models.UsageResponse.Result) -> [Models.UsageRecord]
+    func records(from response: Models.UsageResponse.Result) throws -> [Models.UsageRecord]
 }
 
 

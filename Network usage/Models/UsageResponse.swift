@@ -20,7 +20,7 @@ extension Models {
 
         }
 
-        /// Known IDs
+        /// Known IDs / key types in the fields of the API response
         enum ID: String, Decodable {
             case id = "_id"
             case quarter
@@ -67,7 +67,7 @@ extension Models {
 
             let resourceID: String
             let fields: [Field]
-            let records: [Record]
+            let records: [[String : AnyValue]]
             let links: PageLinks
             let limit: Int
             let total: Int
@@ -81,33 +81,12 @@ extension Models {
                 case total
             }
 
-            typealias Record = [ID : AnyValue]
-
             init(from decoder: Decoder) throws {
                 do {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
                     resourceID = try container.decode(String.self, forKey: .resourceID)
-                    let fields = try container.decode([Field].self, forKey: .fields)
-                    self.fields = fields
-                    // manually decode array of dictionaries and form dictionary array of [ID : AnyValue]
-                    let dictArray = try container.decode([[String : AnyValue]].self, forKey: .records)
-                    var records = [Record]()
-                    try dictArray.forEach { dict in
-                        var record = Record()
-                        try dict.forEach { arg throws in
-                            if let id = ID(rawValue: arg.key) {
-                                let field = fields.first { (field) -> Bool in
-                                    return field.id == id
-                                }
-                                record[id] = try field?.type.convert(value: arg.value)
-                            } else {
-                                throw Errors.decodeError("Unable to form ID from \(arg.key)")
-                            }
-                        }
-                        records.append(record)
-                    }
-                    self.records = records
-                    
+                    self.fields = try container.decode([Field].self, forKey: .fields)
+                    self.records = try container.decode([[String : AnyValue]].self, forKey: .records)
                     links = try container.decode(PageLinks.self, forKey: .links)
                     limit = try container.decode(Int.self, forKey: .limit)
                     total = try container.decode(Int.self, forKey: .total)
@@ -137,51 +116,6 @@ extension Models {
             }
             success = try container.decode(Bool.self, forKey: .success)
             result = try container.decode(UsageResponse.Result.self, forKey: .result)
-        }
-    }
-}
-
-extension Models.UsageResponse.DataType {
-    /// Transforms the given value according to the DataType
-    /// - Parameter value: the value to be transformed
-    func convert(value: Models.AnyValue) throws -> Models.AnyValue {
-        switch self {
-        case .int4:
-            switch value {
-            case .int4:
-                return value
-            case .numeric(let numericValue):
-                return .int4(Int(numericValue))
-            case .string(let strValue):
-                if let int = Int(strValue) {
-                    return .int4(int)
-                } else {
-                    throw Errors.conversionError("unable to convert \(strValue) to Int")
-                }
-            }
-        case .text:
-            switch value {
-            case .int4(let int):
-                return .string(String(int))
-            case .numeric(let numericValue):
-                return .string(String(numericValue))
-            case .string(let strValue):
-                return .string(strValue)
-            }
-        case .numeric:
-            switch value {
-            case .int4(let int):
-                return .numeric(Double(int))
-            case .numeric(let numericValue):
-                return .numeric(numericValue)
-            case .string(let strValue):
-                if let double = Double(strValue) {
-                    return .numeric(double)
-                } else {
-                    throw Errors.conversionError("unable to convert \(strValue) to Double")
-                }
-
-            }
         }
     }
 }

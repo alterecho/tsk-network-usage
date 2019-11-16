@@ -16,11 +16,16 @@ class UsageInteractor: UsageInteractorInputProtocol {
     func load() {
         apiWorker.fetchUsageData { [weak self] (response: Models.UsageResponse?, error: Error?) in
             if let response = response {
-                if let records = self?.mappingWorker.records(from: response.result) {
-                    print(records)
-                } else {
-                    self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "Unable to map records")
+                do {
+                    if let records = try self?.mappingWorker.records(from: response.result) {
+                        print(records)
+                    } else {
+                        self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "Unable to map records")
+                    }
+                } catch {
+                    self?.output?.showAlert(title: "Error", message: error.localizedDescription)
                 }
+
 
             } else {
                 self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
