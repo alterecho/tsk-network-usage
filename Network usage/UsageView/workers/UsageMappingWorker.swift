@@ -18,25 +18,28 @@ class UsageMappingWorker: UsageMappingWorkerProtocol {
         // [[String : AnyValue]] mapped to [[ID : AnyValue]]
         let convertedResponseRecords = try convert(responseRecords: response.records, fields: response.fields)
 
-        convertedResponseRecords.forEach { dict in
-            /// add record only if it has an ID ("_id")
-            if let id = dict[.id], let quarterValue = dict[Models.UsageResponse.ID.quarter] {
-                do {
-                    let date = try Models.Date(value: quarterValue)
-                    let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume],
-                                                    date: date,
-                                                    id: id)
-                    records.append(record)
-                } catch {
-
-                }
-                } else {
-
-            }
-
+        try convertedResponseRecords.forEach { dict in
+            let record = try self.record(from: dict)
+            records.append(record)
         }
 
         return records
+    }
+
+    func record(from dict: [Models.UsageResponse.ID : Models.AnyValue]) throws -> Models.UsageRecord {
+        /// add record only if it has an ID ("_id")
+        guard let id = dict[.id], let quarterValue = dict[Models.UsageResponse.ID.quarter] else {
+            throw Errors.conversionError("Unable to form UsageRecord from \(dict)")
+        }
+        do {
+            let date = try Models.Date(value: quarterValue)
+            let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume],
+                                            date: date,
+                                            id: id)
+            return record
+        } catch {
+            throw error
+        }
     }
 
     private func convert(value: Models.AnyValue, to type: Models.UsageResponse.DataType) throws -> Models.AnyValue {
