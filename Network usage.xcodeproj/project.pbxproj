@@ -20,6 +20,7 @@
 		F1516D9E23802F9A00737F83 /* UsageMappingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1516D9D23802F9A00737F83 /* UsageMappingWorkerTests.swift */; };
 		F1516DA02380343700737F83 /* NetworkUsageTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1516D9F2380343700737F83 /* NetworkUsageTestCase.swift */; };
 		F1516DA1238035EC00737F83 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED85237C0273003CFF99 /* Errors.swift */; };
+		F1516DA323803E0E00737F83 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1516DA223803E0E00737F83 /* UtilsTest.swift */; };
 		F165E485237AA0E800CC87AA /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FF6A3237A9829006F0E31 /* DecodableTests.swift */; };
 		F1A1ED80237BFEAF003CFF99 /* UsageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */; };
 		F1A1ED82237BFEE6003CFF99 /* UsagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */; };
@@ -63,6 +64,7 @@
 		F1516D9B237EB72400737F83 /* AlertSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertSystem.swift; path = "Network usage/AlertSystem.swift"; sourceTree = SOURCE_ROOT; };
 		F1516D9D23802F9A00737F83 /* UsageMappingWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMappingWorkerTests.swift; sourceTree = "<group>"; };
 		F1516D9F2380343700737F83 /* NetworkUsageTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUsageTestCase.swift; sourceTree = "<group>"; };
+		F1516DA223803E0E00737F83 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
 		F165E47B237AA0DD00CC87AA /* NetworkUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkUsageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F165E47F237AA0DD00CC87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageViewController.swift; path = "Network usage/UsageView/UsageViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				F1516D9F2380343700737F83 /* NetworkUsageTestCase.swift */,
+				F1516DA223803E0E00737F83 /* UtilsTest.swift */,
 				F10FF6A3237A9829006F0E31 /* DecodableTests.swift */,
 				F1516D9D23802F9A00737F83 /* UsageMappingWorkerTests.swift */,
 				F165E47F237AA0DD00CC87AA /* Info.plist */,
@@ -324,6 +327,7 @@
 			files = (
 				F1516DA1238035EC00737F83 /* Errors.swift in Sources */,
 				F1516D9E23802F9A00737F83 /* UsageMappingWorkerTests.swift in Sources */,
+				F1516DA323803E0E00737F83 /* UtilsTest.swift in Sources */,
 				F1516DA02380343700737F83 /* NetworkUsageTestCase.swift in Sources */,
 				F165E485237AA0E800CC87AA /* DecodableTests.swift in Sources */,
 			);

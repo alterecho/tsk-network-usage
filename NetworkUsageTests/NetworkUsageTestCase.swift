@@ -20,15 +20,7 @@ class NetworkUsageTestCase: XCTestCase {
     }
 
     func mockUsageResponseData() throws -> Data {
-        let fileName = "data", ext = "json"
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: ext) else {
-            throw Errors.fileNotFound("\(fileName).\(ext) not found")
-        }
-        guard let data = try? Data(contentsOf: url) else {
-            throw Errors.invalidData
-        }
-
-        return data
+        return try Utils.loadData(resource: "data", extension: "json")
     }
 
     func mockUsageResponse() throws -> Models.UsageResponse {
