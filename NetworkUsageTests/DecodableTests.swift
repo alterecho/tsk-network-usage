@@ -9,7 +9,7 @@
 import XCTest
 @testable import NetworkUsage
 
-class DecodableTests: XCTestCase {
+class DecodableTests: NetworkUsageTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,24 +19,15 @@ class DecodableTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testUsageResponseDecodable() throws {
-        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
-            XCTFail("sample not found")
-            return
-        }
-        guard let data = try? Data(contentsOf: url) else {
-            XCTFail("data load error")
-            return
-        }
-        let usageResponse: Models.UsageResponse
+    func testUsageResponseDecodable() {
         do {
-            usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
+            let data = try mockUsageResponseData()
+            let usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
+            print(usageResponse)
         } catch {
             print(error)
             XCTFail(error.localizedDescription)
             return
         }
-        print(usageResponse)
     }
-
 }
