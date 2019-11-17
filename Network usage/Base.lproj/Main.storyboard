@@ -16,21 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nKE-HJ-ip1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nKE-HJ-ip1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dlK-91-ORd"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="utJ-b0-2Cn"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="58T-uu-yb4">
+                                <rect key="frame" x="188.5" y="473.5" width="37" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="58T-uu-yb4" firstAttribute="centerY" secondItem="nKE-HJ-ip1" secondAttribute="centerY" id="1ko-6O-gba"/>
+                            <constraint firstItem="nKE-HJ-ip1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="32Q-25-ofk"/>
+                            <constraint firstItem="nKE-HJ-ip1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Or0-FC-VJg"/>
+                            <constraint firstItem="58T-uu-yb4" firstAttribute="height" secondItem="nKE-HJ-ip1" secondAttribute="height" multiplier="0.0457921" id="hzE-3y-Zxe"/>
+                            <constraint firstItem="nKE-HJ-ip1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ixj-t3-bPM"/>
+                            <constraint firstAttribute="bottom" secondItem="nKE-HJ-ip1" secondAttribute="bottom" id="ja7-xb-94k"/>
+                            <constraint firstItem="58T-uu-yb4" firstAttribute="width" secondItem="nKE-HJ-ip1" secondAttribute="width" multiplier="0.089372" id="l3s-i5-b3M"/>
+                            <constraint firstItem="58T-uu-yb4" firstAttribute="centerX" secondItem="nKE-HJ-ip1" secondAttribute="centerX" id="vv2-jm-6BC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="jkb-o9-GJE"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="58T-uu-yb4" id="aU2-xg-ZwI"/>
                         <outlet property="tableView" destination="nKE-HJ-ip1" id="lVg-yU-hDH"/>
                     </connections>
                 </viewController>

@@ -18,11 +18,15 @@ protocol UsagePresenterInputProtocol: class {
     var output: UsagePresenterOutputProtocol? { get set }
     func present(records: [[Models.UsageRecord]])
     func showAlert(title: String, message: String)
+    func showLoading()
+    func hideLoading()
 }
 
 protocol UsagePresenterOutputProtocol: class {
     func update(vm: UsageViewVM)
     func showAlert(title: String, message: String)
+    func showLoading()
+    func hideLoading()
 }
 
 protocol UsageAPIWorkerProtocol {

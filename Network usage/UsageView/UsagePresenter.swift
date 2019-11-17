@@ -9,6 +9,7 @@
 import Foundation
 
 class UsagePresenter: UsagePresenterInputProtocol {
+
     weak var output: UsagePresenterOutputProtocol?
 
     func present(records: [[Models.UsageRecord]]) {
@@ -37,5 +38,13 @@ class UsagePresenter: UsagePresenterInputProtocol {
 
     func showAlert(title: String, message: String) {
         output?.showAlert(title: title, message: message)
+    }
+
+    func showLoading() {
+        output?.showLoading()
+    }
+
+    func hideLoading() {
+            output?.hideLoading()
     }
 }

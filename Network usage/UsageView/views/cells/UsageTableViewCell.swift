@@ -12,14 +12,21 @@ class UsageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dataVolumeLabel: UILabel!
     @IBOutlet weak var quarterLabel: UILabel!
+    @IBOutlet weak var changeImageView: UIImageView!
 
     var vm: UsageTableViewCellVM? {
         didSet {
             dataVolumeLabel.attributedText = NSAttributedString(
                 string: vm?.dataVolume ?? "",
-                attributes: [.foregroundColor : (vm?.isDecreaseOverPreviousQuarter ?? false) ?  UIColor.green : UIColor.red]
+                attributes: [.foregroundColor : (vm?.isDecreaseOverPreviousQuarter ?? false) ?  UIColor.red : UIColor.black]
             )
             quarterLabel.text = vm?.quarter
+            if vm?.isDecreaseOverPreviousQuarter ?? false {
+                changeImageView.image = UIImage(named: "decreaseArrow")
+            } else {
+                changeImageView.image = nil
+            }
+
         }
     }
 

@@ -12,6 +12,7 @@ class UsageViewController: UIViewController {
     var output: UsageInteractorInputProtocol?
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
 
     private let usageCellID = "usageCellID"
     private var vm: UsageViewVM? {
@@ -23,16 +24,15 @@ class UsageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView.isHidden = true
         if output == nil {
             UsageConfigurator().configure(viewController: self)
         }
-
         tableView.register(UINib(nibName: "UsageTableViewCell", bundle: nil), forCellReuseIdentifier: usageCellID)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.backgroundColor = UIColor.green
         output?.load()
     }
 
@@ -69,6 +69,16 @@ extension UsageViewController: UITableViewDelegate {
 }
 
 extension UsageViewController: UsagePresenterOutputProtocol {
+    func showLoading() {
+        activityIndicatorView.startAnimating()
+        activityIndicatorView.isHidden = false
+    }
+
+    func hideLoading() {
+//        activityIndicatorView.stopAnimating()
+//        activityIndicatorView.isHidden = true
+    }
+
     func update(vm: UsageViewVM) {
         self.vm = vm
     }

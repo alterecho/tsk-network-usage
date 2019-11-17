@@ -15,7 +15,7 @@ class UsageInteractor: UsageInteractorInputProtocol {
 
     private var startResourceID = URLStrings.startResourceID
     private var nextResourceID = URLStrings.startResourceID
-    private var recordsPerPage = 10
+    private var recordsPerPage = 100
     private var currentPage = 1
     
     func load() {
@@ -26,12 +26,15 @@ class UsageInteractor: UsageInteractorInputProtocol {
     }
 
     private func fetchData() {
+        output?.showLoading()
         do {
             try apiWorker.fetchUsageData(resourceID: nextResourceID, limit: recordsPerPage) { [weak self] (response: Models.UsageResponse?, error: Error?) in
                 self?.resultsCompletionHandler(response: response, error: error)
+                self?.output?.hideLoading()
             }
         } catch {
             output?.showAlert(title: "Error", message: error.localizedDescription)
+            output?.hideLoading()
         }
 
     }
@@ -70,7 +73,7 @@ class UsageInteractor: UsageInteractorInputProtocol {
             var record = record
             if let previousRecord = previousRecord {
                 if let dataVolume = record.volumeOfData?.numericValue, let previousDataVolume = previousRecord.volumeOfData?.numericValue,
-                    dataVolume < previousDataVolume {
+                    dataVolume > previousDataVolume /* ordered in descending quarter*/ {
                     record.isDecreaseOverQuarter = true
                 }
             }
