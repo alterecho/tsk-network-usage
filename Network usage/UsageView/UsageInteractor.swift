@@ -55,18 +55,24 @@ class UsageInteractor: UsageInteractorInputProtocol {
     /// returns 2D array  of  arrays of UsageRecord objects. Each array sorted according to year
     /// - Parameter records: UsageRecord objects to be sorted
     func sort(records: [Models.UsageRecord]) -> [[Models.UsageRecord]] {
-        let yearSortedRecords = records.sorted { ($0.date?.year ?? 0) > ($1.date?.year ?? 0) }
-        var yearSeparatedRecords = [[Models.UsageRecord]]()
-        yearSortedRecords.forEach { (record) in
+        let sortedRecords = records.sorted { (record1, record2) in
+            if record1.date?.year == record2.date?.year {
+                return (record1.date?.quarter ?? 0) > (record2.date?.quarter ?? 0)
+            }
+            return (record1.date?.year ?? 0) > (record2.date?.year ?? 0)
+        }
+        var separatedRecords = [[Models.UsageRecord]]()
+
+        sortedRecords.forEach { (record) in
             var recordsArray: [Models.UsageRecord]
-            if record.date?.year == yearSeparatedRecords.last?.last?.date?.year {
-                recordsArray = yearSeparatedRecords.popLast() ?? []
+            if record.date?.year == separatedRecords.last?.last?.date?.year {
+                recordsArray = separatedRecords.popLast() ?? []
             } else {
                 recordsArray = []
             }
             recordsArray.append(record)
-            yearSeparatedRecords.append(recordsArray)
+            separatedRecords.append(recordsArray)
         }
-        return yearSeparatedRecords
+        return separatedRecords
     }
 }
