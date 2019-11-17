@@ -10,11 +10,13 @@ import UIKit
 
 class UsageTableViewCell: UITableViewCell {
 
-    @IBOutlet var dataVolumeLabel: UILabel!
+    @IBOutlet weak var dataVolumeLabel: UILabel!
+    @IBOutlet weak var quarterLabel: UILabel!
 
     var vm: UsageTableViewCellVM? {
         didSet {
             dataVolumeLabel.text = vm?.dataVolume
+            quarterLabel.text = vm?.quarter
         }
     }
 

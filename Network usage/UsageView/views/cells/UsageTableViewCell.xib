@@ -16,18 +16,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dataVolumeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-sg-dkB">
-                        <rect key="frame" x="16" y="12" width="288" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-nz-0Or">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dataVolumeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-sg-dkB">
+                                <rect key="frame" x="8" y="8" width="216.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="quarterLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-3k-3vF">
+                                <rect key="frame" x="224.5" y="8" width="87.5" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" red="0.47208954019999999" green="0.47208954019999999" blue="0.47208954019999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="HOb-nz-0Or" secondAttribute="bottom" id="LOi-mC-rsl"/>
+                    <constraint firstItem="HOb-nz-0Or" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YbG-sj-x8i"/>
+                    <constraint firstAttribute="trailing" secondItem="HOb-nz-0Or" secondAttribute="trailing" id="cyz-qg-4YI"/>
+                    <constraint firstItem="HOb-nz-0Or" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ski-wu-Icu"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dataVolumeLabel" destination="JWW-sg-dkB" id="Pd8-ey-IX8"/>
+                <outlet property="quarterLabel" destination="fwd-3k-3vF" id="7LN-na-JIU"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="90.401785714285708"/>
         </tableViewCell>

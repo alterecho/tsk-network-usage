@@ -15,7 +15,10 @@ class UsagePresenter: UsagePresenterInputProtocol {
         var sections = [UsageTableViewCellVM.Section]()
         records.forEach { (recordsArray) in
             let cellVMs: [UsageTableViewCellVM] = recordsArray.map { (record) in
-                let cellVM = UsageTableViewCellVM(dataVolume: "\(record.volumeOfData?.stringValue ?? "0")")
+                let cellVM = UsageTableViewCellVM(
+                    dataVolume: "\(record.volumeOfData?.stringValue ?? "0")",
+                    quarter: "Q\(record.date?.quarter ?? 1)"
+                )
                 return cellVM
             }
             let sectionTitle: String?

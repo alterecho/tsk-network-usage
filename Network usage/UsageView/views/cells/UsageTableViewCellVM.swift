@@ -17,4 +17,5 @@ struct UsageTableViewCellVM {
     }
 
     let dataVolume: String
+    let quarter: String
 }
