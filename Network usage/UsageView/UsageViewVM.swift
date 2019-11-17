@@ -9,5 +9,5 @@
 import Foundation
 
 struct UsageViewVM {
-    let cellVMs: [UsageTableViewCellVM]
+    let tableSections: [UsageTableViewCellVM.Section]
 }

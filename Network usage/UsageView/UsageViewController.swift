@@ -36,18 +36,22 @@ class UsageViewController: UIViewController {
 extension UsageViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return vm?.tableSections.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vm?.cellVMs.count ?? 0
+        return vm?.tableSections[section].vms.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return vm?.tableSections[section].title
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: usageCellID, for: indexPath) as? UsageTableViewCell else {
             return UITableViewCell()
         }
-        let cellVM = vm?.cellVMs[indexPath.row]
+        let cellVM = vm?.tableSections[indexPath.section].vms[indexPath.row]
         cell.vm = cellVM
         return cell
     }

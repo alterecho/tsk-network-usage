@@ -8,6 +8,13 @@
 
 import Foundation
 
+
+
 struct UsageTableViewCellVM {
+    struct Section {
+        let title: String?
+        var vms: [UsageTableViewCellVM]
+    }
+
     let dataVolume: String
 }

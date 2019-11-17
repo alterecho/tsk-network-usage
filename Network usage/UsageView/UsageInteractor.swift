@@ -42,12 +42,31 @@ class UsageInteractor: UsageInteractorInputProtocol {
 //            nextResourceID = response.result.links.next
             do {
                 let records = try mappingWorker.records(from: response.result)
-                output?.present(records: records)
+                let sortedRecords = sort(records: records)
+                output?.present(records: sortedRecords)
             } catch {
                 output?.showAlert(title: "Error", message: error.localizedDescription)
             }
         } else {
             output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
         }
+    }
+
+    /// returns 2D array  of  arrays of UsageRecord objects. Each array sorted according to year
+    /// - Parameter records: UsageRecord objects to be sorted
+    func sort(records: [Models.UsageRecord]) -> [[Models.UsageRecord]] {
+        let yearSortedRecords = records.sorted { ($0.date?.year ?? 0) > ($1.date?.year ?? 0) }
+        var yearSeparatedRecords = [[Models.UsageRecord]]()
+        yearSortedRecords.forEach { (record) in
+            var recordsArray: [Models.UsageRecord]
+            if record.date?.year == yearSeparatedRecords.last?.last?.date?.year {
+                recordsArray = yearSeparatedRecords.popLast() ?? []
+            } else {
+                recordsArray = []
+            }
+            recordsArray.append(record)
+            yearSeparatedRecords.append(recordsArray)
+        }
+        return yearSeparatedRecords
     }
 }

@@ -16,7 +16,7 @@ protocol UsageInteractorInputProtocol: class {
 
 protocol UsagePresenterInputProtocol: class {
     var output: UsagePresenterOutputProtocol? { get set }
-    func present(records: [Models.UsageRecord])
+    func present(records: [[Models.UsageRecord]])
     func showAlert(title: String, message: String)
 }
 

@@ -11,18 +11,27 @@ import Foundation
 class UsagePresenter: UsagePresenterInputProtocol {
     weak var output: UsagePresenterOutputProtocol?
 
-    func present(records: [Models.UsageRecord]) {
-        var cellVMs = [UsageTableViewCellVM]()
-        records.forEach { (record) in
-            let cellVM = UsageTableViewCellVM(dataVolume: "\(record.volumeOfData?.stringValue ?? "0")")
-            cellVMs.append(cellVM)
+    func present(records: [[Models.UsageRecord]]) {
+        var sections = [UsageTableViewCellVM.Section]()
+        records.forEach { (recordsArray) in
+            let cellVMs: [UsageTableViewCellVM] = recordsArray.map { (record) in
+                let cellVM = UsageTableViewCellVM(dataVolume: "\(record.volumeOfData?.stringValue ?? "0")")
+                return cellVM
+            }
+            let sectionTitle: String?
+            if let year = recordsArray.first?.date?.year {
+                sectionTitle = "\(year)"
+            } else {
+                sectionTitle = nil
+            }
+            let section = UsageTableViewCellVM.Section(title: sectionTitle, vms: cellVMs)
+            sections.append(section)
         }
-        let vm = UsageViewVM(cellVMs: cellVMs)
+        let vm = UsageViewVM(tableSections: sections)
         output?.update(vm: vm)
     }
 
     func showAlert(title: String, message: String) {
         output?.showAlert(title: title, message: message)
     }
-    
 }
