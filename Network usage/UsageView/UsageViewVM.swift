@@ -9,5 +9,5 @@
 import Foundation
 
 struct UsageViewVM {
-    let records: [Models.UsageRecord]
+    let cellVMs: [UsageTableViewCellVM]
 }

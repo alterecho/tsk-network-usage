@@ -28,16 +28,16 @@ enum Models {
             }
         }
 
-//        var stringValue: String {
-//            switch self {
-//            case .string(let value):
-//                return value
-//            case .int4(let value):
-//                return String(value)
-//            case .numeric(let value):
-//                return String(value)
-//            }
-//        }
+        var stringValue: String {
+            switch self {
+            case .string(let value):
+                return value
+            case .int4(let value):
+                return String(value)
+            case .numeric(let value):
+                return String(value)
+            }
+        }
 //
 //        var numericValue: Double? {
 //            switch self {

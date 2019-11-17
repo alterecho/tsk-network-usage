@@ -12,7 +12,12 @@ class UsagePresenter: UsagePresenterInputProtocol {
     weak var output: UsagePresenterOutputProtocol?
 
     func present(records: [Models.UsageRecord]) {
-        let vm = UsageViewVM(records: records)
+        var cellVMs = [UsageTableViewCellVM]()
+        records.forEach { (record) in
+            let cellVM = UsageTableViewCellVM(dataVolume: "\(record.volumeOfData?.stringValue ?? "0")")
+            cellVMs.append(cellVM)
+        }
+        let vm = UsageViewVM(cellVMs: cellVMs)
         output?.update(vm: vm)
     }
 

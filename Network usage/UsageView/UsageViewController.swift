@@ -11,11 +11,18 @@ import UIKit
 class UsageViewController: UIViewController {
     var output: UsageInteractorInputProtocol?
 
+    @IBOutlet var tableView: UITableView!
+
+    private let usageCellID = "usageCellID"
+    private var vm: UsageViewVM?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if output == nil {
             UsageConfigurator().configure(viewController: self)
         }
+
+        tableView.register(UINib(nibName: "UsageTableViewCell", bundle: nil), forCellReuseIdentifier: usageCellID)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -26,9 +33,36 @@ class UsageViewController: UIViewController {
 
 }
 
+extension UsageViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return vm?.cellVMs.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: usageCellID, for: indexPath) as? UsageTableViewCell else {
+            return UITableViewCell()
+        }
+        let cellVM = vm?.cellVMs[indexPath.row]
+        cell.vm = cellVM
+        return cell
+    }
+}
+
+extension UsageViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
+}
+
 extension UsageViewController: UsagePresenterOutputProtocol {
     func update(vm: UsageViewVM) {
-
+        self.vm = vm
+        tableView.reloadData()
     }
 
     func showAlert(title: String, message: String) {

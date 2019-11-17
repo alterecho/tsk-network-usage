@@ -24,6 +24,9 @@
 		F1516DA523803FF900737F83 /* UsagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1516DA423803FF900737F83 /* UsagePresenterTests.swift */; };
 		F165E485237AA0E800CC87AA /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FF6A3237A9829006F0E31 /* DecodableTests.swift */; };
 		F17853752380F978008C5EC0 /* help.json in Resources */ = {isa = PBXBuildFile; fileRef = F17853742380F978008C5EC0 /* help.json */; };
+		F178538623810967008C5EC0 /* UsageTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1785384238107EC008C5EC0 /* UsageTableViewCellVM.swift */; };
+		F178538723810C9B008C5EC0 /* UsageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1785381238106B9008C5EC0 /* UsageTableViewCell.swift */; };
+		F178538823810D15008C5EC0 /* UsageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1785380238106B9008C5EC0 /* UsageTableViewCell.xib */; };
 		F1A1ED80237BFEAF003CFF99 /* UsageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */; };
 		F1A1ED82237BFEE6003CFF99 /* UsagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */; };
 		F1A1ED86237C0273003CFF99 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED85237C0273003CFF99 /* Errors.swift */; };
@@ -71,6 +74,9 @@
 		F165E47B237AA0DD00CC87AA /* NetworkUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkUsageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F165E47F237AA0DD00CC87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17853742380F978008C5EC0 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
+		F1785380238106B9008C5EC0 /* UsageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsageTableViewCell.xib; path = "Network usage/UsageView/views/cells/UsageTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		F1785381238106B9008C5EC0 /* UsageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageTableViewCell.swift; path = "Network usage/UsageView/views/cells/UsageTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		F1785384238107EC008C5EC0 /* UsageTableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageTableViewCellVM.swift; path = "Network usage/UsageView/views/cells/UsageTableViewCellVM.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageViewController.swift; path = "Network usage/UsageView/UsageViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageInteractor.swift; path = "Network usage/UsageView/UsageInteractor.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsagePresenter.swift; path = "Network usage/UsageView/UsagePresenter.swift"; sourceTree = SOURCE_ROOT; };
@@ -170,6 +176,7 @@
 				F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */,
 				F1A1ED7F237BFEAF003CFF99 /* UsageInteractor.swift */,
 				F1A1ED81237BFEE6003CFF99 /* UsagePresenter.swift */,
+				F178537A23810693008C5EC0 /* views */,
 				F1A1ED96237C548F003CFF99 /* workers */,
 			);
 			path = UsageView;
@@ -194,6 +201,24 @@
 				F165E47F237AA0DD00CC87AA /* Info.plist */,
 			);
 			path = NetworkUsageTests;
+			sourceTree = "<group>";
+		};
+		F178537A23810693008C5EC0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F178537B2381069A008C5EC0 /* cells */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F178537B2381069A008C5EC0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1785381238106B9008C5EC0 /* UsageTableViewCell.swift */,
+				F1785384238107EC008C5EC0 /* UsageTableViewCellVM.swift */,
+				F1785380238106B9008C5EC0 /* UsageTableViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		F1A1ED89237C033C003CFF99 /* Models */ = {
@@ -296,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F12C907C237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf in Resources */,
+				F178538823810D15008C5EC0 /* UsageTableViewCell.xib in Resources */,
 				F12C9051237A6AA000582B05 /* LaunchScreen.storyboard in Resources */,
 				F12C904E237A6AA000582B05 /* Assets.xcassets in Resources */,
 				F12C907F237A6C4000582B05 /* data.json in Resources */,
@@ -318,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F178538623810967008C5EC0 /* UsageTableViewCellVM.swift in Sources */,
 				F1A1ED8D237C0355003CFF99 /* Models.swift in Sources */,
 				F1A1ED91237C5207003CFF99 /* UsageViewVM.swift in Sources */,
 				F1A1ED9A237C549D003CFF99 /* UsageMappingWorker.swift in Sources */,
@@ -325,6 +352,7 @@
 				F10FF6A2237A941A006F0E31 /* URLStrings.swift in Sources */,
 				F12C9084237A846B00582B05 /* UsageProtocols.swift in Sources */,
 				F1A1ED82237BFEE6003CFF99 /* UsagePresenter.swift in Sources */,
+				F178538723810C9B008C5EC0 /* UsageTableViewCell.swift in Sources */,
 				F1A1ED95237C547C003CFF99 /* UsageConfigurator.swift in Sources */,
 				F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */,
 				F1A1ED99237C549D003CFF99 /* UsageAPIWorker.swift in Sources */,
