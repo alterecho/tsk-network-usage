@@ -31,7 +31,7 @@ class UsagePresenter: UsagePresenterInputProtocol {
             let section = UsageTableViewCellVM.Section(title: sectionTitle, vms: cellVMs)
             sections.append(section)
         }
-        let vm = UsageViewVM(tableSections: sections)
+        let vm = UsageViewVM(title: "Network data volume", tableSections: sections)
         output?.update(vm: vm)
     }
 

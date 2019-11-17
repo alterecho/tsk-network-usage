@@ -14,7 +14,12 @@ class UsageViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     private let usageCellID = "usageCellID"
-    private var vm: UsageViewVM?
+    private var vm: UsageViewVM? {
+        didSet {
+            title = vm?.title
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +71,6 @@ extension UsageViewController: UITableViewDelegate {
 extension UsageViewController: UsagePresenterOutputProtocol {
     func update(vm: UsageViewVM) {
         self.vm = vm
-        tableView.reloadData()
     }
 
     func showAlert(title: String, message: String) {
