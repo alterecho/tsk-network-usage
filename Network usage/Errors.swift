@@ -13,4 +13,5 @@ enum Errors: Error {
     case fileNotFound(String)
     case invalidData
     case conversionError(String)
+    case invalidURL(String)
 }

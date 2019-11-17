@@ -58,10 +58,10 @@ extension Models {
 
                 init(from decoder: Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    var urlStr = try container.decode(String.self, forKey: .next)
-                    start = URLs.base.appendingPathComponent(urlStr)
-                    urlStr = try container.decode(String.self, forKey: .next)
-                    next = URLs.base.appendingPathComponent(urlStr)
+//                    var urlStr = try container.decode(String.self, forKey: .next)
+                    start = try container.decode(URL.self, forKey: .start)
+//                    urlStr = try container.decode(String.self, forKey: .next)
+                    next = try container.decode(URL.self, forKey: .next)
                 }
             }
 

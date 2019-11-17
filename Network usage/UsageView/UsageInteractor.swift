@@ -13,26 +13,38 @@ class UsageInteractor: UsageInteractorInputProtocol {
     let apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker()
     let mappingWorker: UsageMappingWorker = UsageMappingWorker()
 
+    private var resourceID = URLStrings.startResourceID
+    private var recordsPerPage = 10
+    private var currentPage = 1
+
     func load() {
-        apiWorker.fetchUsageData { [weak self] (response: Models.UsageResponse?, error: Error?) in
-            if let response = response {
-                do {
-                    if let records = try self?.mappingWorker.records(from: response.result) {
-                        print(records)
-                    } else {
-                        self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "Unable to map records")
-                    }
-                } catch {
-                    self?.output?.showAlert(title: "Error", message: error.localizedDescription)
-                }
-
-
-            } else {
-                self?.output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
-            }
-        }
+        fetchData()
     }
 
     func reachedEndOfPage() {
+    }
+
+    private func fetchData() {
+        do {
+            try apiWorker.fetchUsageData(resourceID: resourceID, limit: recordsPerPage) { [weak self] (response: Models.UsageResponse?, error: Error?) in
+                self?.resultsCompletionHandler(response: response, error: error)
+            }
+        } catch {
+            output?.showAlert(title: "Error", message: error.localizedDescription)
+        }
+
+    }
+
+    private func resultsCompletionHandler(response: Models.UsageResponse?, error: Error?) {
+        if let response = response {
+            do {
+                let records = try mappingWorker.records(from: response.result)
+                print(records)
+            } catch {
+                output?.showAlert(title: "Error", message: error.localizedDescription)
+            }
+        } else {
+            output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
+        }
     }
 }

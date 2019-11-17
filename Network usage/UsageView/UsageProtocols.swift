@@ -26,7 +26,7 @@ protocol UsagePresenterOutputProtocol: class {
 }
 
 protocol UsageAPIWorkerProtocol {
-    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ())
+    func fetchUsageData(resourceID: String, limit: Int, completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws
 }
 
 protocol UsageMappingWorkerProtocol {

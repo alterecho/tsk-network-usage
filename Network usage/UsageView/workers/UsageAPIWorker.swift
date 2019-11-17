@@ -9,13 +9,18 @@
 import Foundation
 
 class UsageAPIWorker: UsageAPIWorkerProtocol {
-    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) {
+    func fetchUsageData(resourceID: String, limit: Int, completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws {
         
-        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
-            return
+//        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
+//            return
+        //        }
+        let urlString = URLStrings.base.appending("\(URLStrings.dataPath)?resource_id=\(resourceID)&limit=\(limit)")
+        guard let url = URL(string: urlString) else {
+            throw Errors.invalidURL("invalid URL \(urlString)")
         }
-        let request = URLRequest(url: url)
 
+        let request = URLRequest(url: url)
+        print(url)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
