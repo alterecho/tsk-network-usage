@@ -39,16 +39,16 @@ enum Models {
             }
         }
 //
-//        var numericValue: Double? {
-//            switch self {
-//            case .string(let value):
-//                return Double(value)
-//            case .int4(let value):
-//                return Double(value)
-//            case .numeric(let value):
-//                return value
-//            }
-//        }
+        var numericValue: Double? {
+            switch self {
+            case .string(let value):
+                return Double(value)
+            case .int4(let value):
+                return Double(value)
+            case .numeric(let value):
+                return value
+            }
+        }
     }
 
     struct Date {
@@ -83,6 +83,7 @@ enum Models {
         let volumeOfData: AnyValue?
         let date: Date?
         let id: AnyValue
+        var isDecreaseOverQuarter: Bool = false
     }
 
 }

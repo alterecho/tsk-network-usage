@@ -18,4 +18,5 @@ struct UsageTableViewCellVM {
 
     let dataVolume: String
     let quarter: String
+    let isDecreaseOverPreviousQuarter: Bool
 }

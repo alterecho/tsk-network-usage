@@ -15,7 +15,10 @@ class UsageTableViewCell: UITableViewCell {
 
     var vm: UsageTableViewCellVM? {
         didSet {
-            dataVolumeLabel.text = vm?.dataVolume
+            dataVolumeLabel.attributedText = NSAttributedString(
+                string: vm?.dataVolume ?? "",
+                attributes: [.foregroundColor : (vm?.isDecreaseOverPreviousQuarter ?? false) ?  UIColor.green : UIColor.red]
+            )
             quarterLabel.text = vm?.quarter
         }
     }

@@ -63,7 +63,17 @@ class UsageInteractor: UsageInteractorInputProtocol {
         }
         var separatedRecords = [[Models.UsageRecord]]()
 
+        // for decideding decrease over previous quarter
+        var previousRecord: Models.UsageRecord? = nil
+
         sortedRecords.forEach { (record) in
+            var record = record
+            if let previousRecord = previousRecord {
+                if let dataVolume = record.volumeOfData?.numericValue, let previousDataVolume = previousRecord.volumeOfData?.numericValue,
+                    dataVolume < previousDataVolume {
+                    record.isDecreaseOverQuarter = true
+                }
+            }
             var recordsArray: [Models.UsageRecord]
             if record.date?.year == separatedRecords.last?.last?.date?.year {
                 recordsArray = separatedRecords.popLast() ?? []
@@ -72,6 +82,7 @@ class UsageInteractor: UsageInteractorInputProtocol {
             }
             recordsArray.append(record)
             separatedRecords.append(recordsArray)
+            previousRecord = record
         }
         return separatedRecords
     }
