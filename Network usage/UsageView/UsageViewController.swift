@@ -17,6 +17,13 @@ class UsageViewController: UIViewController {
     private let usageCellID = "usageCellID"
     private var vm: UsageViewVM? {
         didSet {
+            vm?.tableSections.forEach({ (section) in
+                section.vms.forEach { (vm) in
+                    if vm.isDecreaseOverPreviousQuarter {
+                        print("isDecreaseOverPreviousQuarter")
+                    }
+                }
+            })
             title = vm?.title
             tableView.reloadData()
         }

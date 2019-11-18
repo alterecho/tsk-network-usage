@@ -10,7 +10,7 @@ import Foundation
 
 class UsageAPIWorker: UsageAPIWorkerProtocol {
     var resourceID: String?
-    var limit = 5
+    var limit = 20
     var offset = 0
     
     private var currentFetchPath: String?
@@ -28,7 +28,8 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
         if let nextFetchPath = nextFetchPath {
             nextURL = URL(string: URLStrings.base + nextFetchPath)
         } else if let resourceID = resourceID {
-            nextURL = URL(string: URLStrings.base.appending("\(URLStrings.dataPath)?resource_id=\(resourceID)&limit=\(limit)"))
+            // descending order search
+            nextURL = URL(string: URLStrings.base.appending("\(URLStrings.dataPath)?resource_id=\(resourceID)&limit=\(limit)&sort=quarter%20desc"))
         } else {
             nextURL = nil
         }
