@@ -79,17 +79,19 @@ class UsageInteractor: UsageInteractorInputProtocol {
         }
         var separatedRecords = [[Models.UsageRecord]]()
 
-        // for decideding decrease over previous quarter
-        var previousRecord: Models.UsageRecord? = nil
 
-        sortedRecords.forEach { (record) in
-            var record = record
-            if let previousRecord = previousRecord {
-                if let dataVolume = record.volumeOfData?.numericValue, let previousDataVolume = previousRecord.volumeOfData?.numericValue,
-                    dataVolume > previousDataVolume /* ordered in descending quarter*/ {
-                    record.isDecreaseOverQuarter = true
-                }
+        for i in 0..<sortedRecords.count {
+            var record = sortedRecords[i]
+
+            // decide decrease over previous quarter
+            let nextIndex = i + 1
+            let nextRecord: Models.UsageRecord? = nextIndex < sortedRecords.count ? sortedRecords[nextIndex] : nil
+            if let dataVolume = record.volumeOfData?.numericValue, let nextDataVolume = nextRecord?.volumeOfData?.numericValue,
+                dataVolume < nextDataVolume /* ordered in descending quarter*/ {
+                record.isDecreaseOverQuarter = true
             }
+
+            // if it's a new year, create a new array of records for the next set of records (table section)
             var recordsArray: [Models.UsageRecord]
             if record.date?.year == separatedRecords.last?.last?.date?.year {
                 recordsArray = separatedRecords.popLast() ?? []
@@ -98,8 +100,8 @@ class UsageInteractor: UsageInteractorInputProtocol {
             }
             recordsArray.append(record)
             separatedRecords.append(recordsArray)
-            previousRecord = record
         }
+
         return separatedRecords
     }
 }
