@@ -30,7 +30,14 @@ protocol UsagePresenterOutputProtocol: class {
 }
 
 protocol UsageAPIWorkerProtocol {
-    func fetchUsageData(resourceID: String, limit: Int, completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws
+    /// change the lnumber of items to be retrieved if required
+    var limit: Int { get set }
+    /// change the data offset if required
+    var offset: Int { get set }
+    /// change the resourceID if required
+    var resourceID: String? { get set }
+
+    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws
 }
 
 protocol UsageMappingWorkerProtocol {

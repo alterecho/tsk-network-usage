@@ -53,11 +53,17 @@ extension UsageViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: usageCellID, for: indexPath) as? UsageTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: usageCellID, for: indexPath) as? UsageTableViewCell, let vm = vm else {
             return UITableViewCell()
         }
-        let cellVM = vm?.tableSections[indexPath.section].vms[indexPath.row]
+
+        if indexPath.section == vm.tableSections.count - 1 && indexPath.row == vm.tableSections[indexPath.section].vms.count - 1 {
+            output?.reachedEndOfPage()
+        }
+
+        let cellVM = vm.tableSections[indexPath.section].vms[indexPath.row]
         cell.vm = cellVM
+
         return cell
     }
 }
@@ -75,8 +81,8 @@ extension UsageViewController: UsagePresenterOutputProtocol {
     }
 
     func hideLoading() {
-//        activityIndicatorView.stopAnimating()
-//        activityIndicatorView.isHidden = true
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.isHidden = true
     }
 
     func update(vm: UsageViewVM) {

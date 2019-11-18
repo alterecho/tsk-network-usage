@@ -12,5 +12,5 @@ import Foundation
 class URLStrings {
     static let base = "https://data.gov.sg"
     static let dataPath = "/api/action/datastore_search"
-    static let startResourceID = "a807b7ab-6cad-4aa6-87d0-e283a7353a0f"
+    
 }

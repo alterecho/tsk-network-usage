@@ -13,39 +13,52 @@ class UsageInteractor: UsageInteractorInputProtocol {
     let apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker()
     let mappingWorker: UsageMappingWorker = UsageMappingWorker()
 
-    private var startResourceID = URLStrings.startResourceID
-    private var nextResourceID = URLStrings.startResourceID
-    private var recordsPerPage = 100
-    private var currentPage = 1
+    private var records = [Models.UsageRecord]()
+
+    private var isLoading = false {
+        didSet {
+            if isLoading {
+                output?.showLoading()
+            } else {
+                output?.hideLoading()
+            }
+        }
+    }
     
     func load() {
         fetchData()
     }
 
     func reachedEndOfPage() {
+        if isLoading {
+            return
+        }
+        fetchData()
+
+
     }
 
     private func fetchData() {
-        output?.showLoading()
+        isLoading = true
         do {
-            try apiWorker.fetchUsageData(resourceID: nextResourceID, limit: recordsPerPage) { [weak self] (response: Models.UsageResponse?, error: Error?) in
+            try apiWorker.fetchUsageData { [weak self] (response: Models.UsageResponse?, error: Error?) in
                 self?.resultsCompletionHandler(response: response, error: error)
-                self?.output?.hideLoading()
+                self?.isLoading = false
             }
         } catch {
             output?.showAlert(title: "Error", message: error.localizedDescription)
-            output?.hideLoading()
+            isLoading = false
         }
 
     }
 
     private func resultsCompletionHandler(response: Models.UsageResponse?, error: Error?) {
         if let response = response {
-//            startResourceID = response.result.links.start
-//            nextResourceID = response.result.links.next
             do {
                 let records = try mappingWorker.records(from: response.result)
-                let sortedRecords = sort(records: records)
+                self.records.append(contentsOf: records)
+                let sortedRecords = sort(records: self.records)
+                self.records = sortedRecords.flatMap { $0 }
                 output?.present(records: sortedRecords)
             } catch {
                 output?.showAlert(title: "Error", message: error.localizedDescription)

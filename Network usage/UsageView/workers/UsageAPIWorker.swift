@@ -9,23 +9,50 @@
 import Foundation
 
 class UsageAPIWorker: UsageAPIWorkerProtocol {
-    func fetchUsageData(resourceID: String, limit: Int, completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws {
-        
+    var resourceID: String?
+    var limit = 5
+    var offset = 0
+    
+    private var currentFetchPath: String?
+    private var nextFetchPath: String?
+
+    var nextURL: URL? = nil
+
+    init() {
+        //start resourceID
+        resourceID = "a807b7ab-6cad-4aa6-87d0-e283a7353a0f"
+        constructNextURL()
+    }
+
+    private func constructNextURL() {
+        if let nextFetchPath = nextFetchPath {
+            nextURL = URL(string: URLStrings.base + nextFetchPath)
+        } else if let resourceID = resourceID {
+            nextURL = URL(string: URLStrings.base.appending("\(URLStrings.dataPath)?resource_id=\(resourceID)&limit=\(limit)"))
+        } else {
+            nextURL = nil
+        }
+
+    }
+
+    func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws {
 //        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
 //            return
         //        }
-        let urlString = URLStrings.base.appending("\(URLStrings.dataPath)?resource_id=\(resourceID)&limit=\(limit)")
-        guard let url = URL(string: urlString) else {
-            throw Errors.invalidURL("invalid URL \(urlString)")
+        guard let url = nextURL else {
+            completionHandler(nil, nil)
+            return
         }
 
         let request = URLRequest(url: url)
         print(url)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
             if let data = data {
                 do {
                     let usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
                     DispatchQueue.main.async {
+                        self?.nextFetchPath = usageResponse.result.links.next.absoluteString
+                        self?.constructNextURL()
                         completionHandler(usageResponse, nil)
                     }
                 } catch {
