@@ -70,7 +70,7 @@ extension Models {
             let records: [[String : AnyValue]]
             let links: PageLinks
             let limit: Int
-            let total: Int
+            let total: Int?
 
             enum CodingKeys: String, CodingKey {
                 case resourceID = "resource_id"
@@ -89,7 +89,7 @@ extension Models {
                     self.records = try container.decode([[String : AnyValue]].self, forKey: .records)
                     links = try container.decode(PageLinks.self, forKey: .links)
                     limit = try container.decode(Int.self, forKey: .limit)
-                    total = try container.decode(Int.self, forKey: .total)
+                    total = try container.decodeIfPresent(Int.self, forKey: .total)
                 } catch {
                     throw error
                 }

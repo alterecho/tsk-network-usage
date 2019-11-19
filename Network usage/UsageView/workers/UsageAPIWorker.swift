@@ -46,7 +46,6 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
         }
 
         let request = URLRequest(url: url)
-        print(url)
         URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
             if let data = data {
                 do {

@@ -46,7 +46,7 @@ class UsageInteractor: UsageInteractorInputProtocol {
                 self?.isLoading = false
             }
         } catch {
-            output?.showAlert(title: "Error", message: error.localizedDescription)
+            output?.showAlert(title: Strings.ERROR_TITLE, message: error.localizedDescription)
             isLoading = false
         }
 
@@ -54,17 +54,23 @@ class UsageInteractor: UsageInteractorInputProtocol {
 
     private func resultsCompletionHandler(response: Models.UsageResponse?, error: Error?) {
         if let response = response {
-            do {
-                let records = try mappingWorker.records(from: response.result)
-                self.records.append(contentsOf: records)
-                let sortedRecords = sort(records: self.records)
-                self.records = sortedRecords.flatMap { $0 }
-                output?.present(records: sortedRecords)
-            } catch {
-                output?.showAlert(title: "Error", message: error.localizedDescription)
+            // if no records, show alert
+            if response.result.records.count == 0 {
+                output?.showAlert(title: Strings.NO_MORE_RECORDS_TITLE, message: Strings.NO_MORE_RECORDS_MSG)
+            } else {
+                do {
+                    let records = try mappingWorker.records(from: response.result)
+                    self.records.append(contentsOf: records)
+                    let sortedRecords = sort(records: self.records)
+                    self.records = sortedRecords.flatMap { $0 }
+                    output?.present(records: sortedRecords)
+                } catch {
+                    output?.showAlert(title: Strings.ERROR_TITLE, message: error.localizedDescription)
+                }
             }
+
         } else {
-            output?.showAlert(title: "Error", message: error?.localizedDescription ?? "No response from api")
+            output?.showAlert(title: Strings.ERROR_TITLE, message: error?.localizedDescription ?? "No response from api")
         }
     }
 
