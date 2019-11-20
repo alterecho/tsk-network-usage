@@ -14,4 +14,6 @@ enum Errors: Error {
     case invalidData
     case conversionError(String)
     case invalidURL(String)
+    case URLnotFound(String)
+    case generic(String)
 }
