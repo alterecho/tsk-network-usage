@@ -28,12 +28,12 @@ class UsageMappingWorker: UsageMappingWorkerProtocol {
 
     func record(from dict: [Models.UsageResponse.ID : Models.AnyValue]) throws -> Models.UsageRecord {
         /// add record only if it has an ID ("_id")
-        guard let id = dict[.id], let quarterValue = dict[Models.UsageResponse.ID.quarter] else {
+        guard let id = dict[.id]?.stringValue, let quarterValue = dict[Models.UsageResponse.ID.quarter] else {
             throw Errors.conversionError("Unable to form UsageRecord from \(dict)")
         }
         do {
             let date = try Models.Date(value: quarterValue)
-            let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume],
+            let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume]?.numericValue,
                                             date: date,
                                             id: id)
             return record

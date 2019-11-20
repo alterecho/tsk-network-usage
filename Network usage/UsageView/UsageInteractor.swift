@@ -11,6 +11,7 @@ import Foundation
 class UsageInteractor: UsageInteractorInputProtocol {
     var output: UsagePresenterInputProtocol?
     let apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker()
+    let cacheWorker: UsageCacheWorkerProtocol = UsageCacheWorker()
     let mappingWorker: UsageMappingWorker = UsageMappingWorker()
 
     private var records = [Models.UsageRecord]()
@@ -61,17 +62,27 @@ class UsageInteractor: UsageInteractorInputProtocol {
                 do {
                     let records = try mappingWorker.records(from: response.result)
                     self.records.append(contentsOf: records)
-                    let sortedRecords = sort(records: self.records)
-                    self.records = sortedRecords.flatMap { $0 }
-                    output?.present(records: sortedRecords)
+                    try cacheWorker.clearCache()
+                    try? cacheWorker.cache(records: self.records)
                 } catch {
                     output?.showAlert(title: Strings.ERROR_TITLE, message: error.localizedDescription)
+                    if let cachedRecords = cacheWorker.loadCachedRecords() {
+                        self.records = cachedRecords
+                    }
                 }
             }
-
         } else {
-            output?.showAlert(title: Strings.ERROR_TITLE, message: error?.localizedDescription ?? "No response from api")
+            output?.showAlert(title: Strings.ERROR_TITLE, message: error?.localizedDescription ?? "Unable to fetch Records")
+            if let cachedRecords = cacheWorker.loadCachedRecords() {
+                self.records = cachedRecords
+            }
+
         }
+
+        let sortedRecords = sort(records: self.records)
+        self.records = sortedRecords.flatMap { $0 }
+
+        output?.present(records: sortedRecords)
     }
 
     /// returns 2D array  of  arrays of UsageRecord objects. Each array sorted according to year
@@ -92,7 +103,7 @@ class UsageInteractor: UsageInteractorInputProtocol {
             // decide decrease over previous quarter
             let nextIndex = i + 1
             let nextRecord: Models.UsageRecord? = nextIndex < sortedRecords.count ? sortedRecords[nextIndex] : nil
-            if let dataVolume = record.volumeOfData?.numericValue, let nextDataVolume = nextRecord?.volumeOfData?.numericValue,
+            if let dataVolume = record.volumeOfData, let nextDataVolume = nextRecord?.volumeOfData,
                 dataVolume < nextDataVolume /* ordered in descending quarter*/ {
                 record.isDecreaseOverQuarter = true
             }

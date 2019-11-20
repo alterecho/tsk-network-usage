@@ -9,42 +9,30 @@
 import CoreData
 
 class CoreDataStore {
+
+    static let shared = CoreDataStore()
+
     private let container: NSPersistentContainer
-    init() throws {
+    
+    private init() {
         container = NSPersistentContainer(name: "NetworkUsage")
-        container.loadPersistentStores { [weak self] (storeDescription, error) in
+        container.loadPersistentStores { (storeDescription, error) in
             if let error = error {
                 fatalError(error.localizedDescription)
             } else {
-                do {
-                    let record = Models.UsageRecord(volumeOfData: Models.AnyValue.numeric(10.0), date: try Models.Date(string: "1990-Q1"), id: .string("dfsfg"))
-                    self?.save(record: record)
-                    self?.printAll()
-                } catch {
-                    print(error)
-                }
+//                do {
+//                    let record = Models.UsageRecord(volumeOfData: 10.0, date: try Models.Date(string: "1990-Q1"), id: "dfsfg")
+//                    self?.save(records: [record])
+//                    self?.printAll()
+//                } catch {
+//                    print(error)
+//                }
 
             }
         }
     }
-
-//    func save(str: String) {
-//        let context = container.viewContext
-//        if let entity = NSEntityDescription.entity(forEntityName: "UsageRecord", in: context) {
-//            let managedObject = NSManagedObject(entity: entity, insertInto: context)
-//            managedObject.setValue(str, forKey: "str")
-//        }
-//
-//        do {
-//            try context.save()
-//        } catch {
-//            print(error)
-//        }
-//
-//
-//    }
-
-    func printAll() {
+    
+    private func printRecords() {
         let context = container.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "UsageRecord")
         do {
@@ -65,23 +53,64 @@ class CoreDataStore {
 
     }
 
-    func save(record: Models.UsageRecord) {
+    func save(records: [Models.UsageRecord]) throws {
         let context = container.viewContext
         if let entityDescription = NSEntityDescription.entity(forEntityName: "UsageRecord", in: context) {
-            let managedObject = NSManagedObject(entity: entityDescription, insertInto: context)
-            managedObject.setValue(record.id.stringValue, forKey: "id")
-            managedObject.setValue(record.volumeOfData?.numericValue, forKey: "dataVolume")
-            managedObject.setValue(record.date?.year, forKey: "year")
-            managedObject.setValue(record.date?.quarter, forKey: "quarter")
-            managedObject.setValue(record.isDecreaseOverQuarter, forKey: "isDecreaseOverQuarter")
+            records.forEach { (record) in
+                let managedObject = NSManagedObject(entity: entityDescription, insertInto: context)
+                managedObject.setValue(record.id, forKey: "id")
+                managedObject.setValue(record.volumeOfData, forKey: "dataVolume")
+                managedObject.setValue(record.date?.year, forKey: "year")
+                managedObject.setValue(record.date?.quarter, forKey: "quarter")
+                managedObject.setValue(record.isDecreaseOverQuarter, forKey: "isDecreaseOverQuarter")
+            }
         }
-
         do {
             try context.save()
         } catch {
             print(error)
+            throw error
+        }
+    }
+
+    func retrieveAllRecords() throws -> [Models.UsageRecord] {
+        let context = container.viewContext
+        var records = [Models.UsageRecord]()
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "UsageRecord")
+        do {
+            let result = try context.fetch(req)
+            try result.forEach { (res) in
+                if let mo = res as? NSManagedObject {
+                    let usageRecord = try Models.UsageRecord(managedObject: mo)
+                    records.append(usageRecord)
+                } else {
+                    throw Errors.generic("fetch result not NSManagedObject")
+                }
+            }
+        } catch {
+            print(error)
+            throw error
         }
 
+        return records
+    }
+
+    func deleteAllRecords() throws {
+        let context = container.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "UsageRecord")
+        do {
+            let result = try context.fetch(req)
+            try result.forEach { (res) in
+                if let mo = res as? NSManagedObject {
+                    context.delete(mo)
+                } else {
+                    throw Errors.generic("fetch result not NSManagedObject")
+                }
+            }
+        } catch {
+            print(error)
+            throw error
+        }
 
     }
 }
@@ -96,9 +125,9 @@ extension Models.UsageRecord {
         }
 
         do {
-            self.volumeOfData = .numeric(volumeOfData)
+            self.volumeOfData = volumeOfData
             self.date = try Models.Date(string: "\(year)-Q\(quarter)")
-            self.id = .string(id)
+            self.id = id
             self.isDecreaseOverQuarter = isDecreaseOverQuarter
         } catch {
             throw error

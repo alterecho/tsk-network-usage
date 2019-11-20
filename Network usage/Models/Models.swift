@@ -80,9 +80,9 @@ enum Models {
     }
 
     struct UsageRecord {
-        let volumeOfData: AnyValue?
+        let volumeOfData: Double?
         let date: Date?
-        let id: AnyValue
+        let id: String
         var isDecreaseOverQuarter: Bool = false
     }
 

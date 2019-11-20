@@ -44,4 +44,10 @@ protocol UsageMappingWorkerProtocol {
     func records(from response: Models.UsageResponse.Result) throws -> [Models.UsageRecord]
 }
 
+protocol UsageCacheWorkerProtocol {
+    func cache(records: [Models.UsageRecord]) throws
+    func loadCachedRecords() -> [Models.UsageRecord]?
+    func clearCache() throws
+}
+
 

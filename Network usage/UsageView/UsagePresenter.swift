@@ -17,7 +17,7 @@ class UsagePresenter: UsagePresenterInputProtocol {
         records.forEach { (recordsArray) in
             let cellVMs: [UsageTableViewCellVM] = recordsArray.map { (record) in
                 let cellVM = UsageTableViewCellVM(
-                    dataVolume: "\(record.volumeOfData?.stringValue ?? "0")",
+                    dataVolume: "\(record.volumeOfData ?? 0.0)",
                     quarter: "Q\(record.date?.quarter ?? 1)",
                     isDecreaseOverPreviousQuarter: record.isDecreaseOverQuarter
                 )
