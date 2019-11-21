@@ -14,7 +14,10 @@ class UsageInteractor: UsageInteractorInputProtocol {
     let cacheWorker: UsageCacheWorkerProtocol = UsageCacheWorker()
     let mappingWorker: UsageMappingWorker = UsageMappingWorker()
 
+    /// the records that are accumulated and is being displayed
     private var records = [Models.UsageRecord]()
+    /// used to clear the records property on successful fetch
+    private var isDisplayingCachedData = false
 
     private var isLoading = false {
         didSet {
@@ -53,36 +56,58 @@ class UsageInteractor: UsageInteractorInputProtocol {
 
     }
 
+    /// handles response from API
     private func resultsCompletionHandler(response: Models.UsageResponse?, error: Error?) {
-        if let response = response {
+        if let error = error {
+            output?.showAlert(title: Strings.ERROR_TITLE, message: error.localizedDescription)
+            if records.count == 0 {
+                loadFromCache()
+            }
+        } else if let response = response {
             // if no records, show alert
             if response.result.records.count == 0 {
                 output?.showAlert(title: Strings.NO_MORE_RECORDS_TITLE, message: Strings.NO_MORE_RECORDS_MSG)
             } else {
                 do {
                     let records = try mappingWorker.records(from: response.result)
+
+                    // clear existing records array if it is cached data. to prevent mixing of cached data
+                    if isDisplayingCachedData {
+                        self.records = []
+                        isDisplayingCachedData = false
+                    }
                     self.records.append(contentsOf: records)
+                    let sortedRecords = sort(records: self.records)
+                    self.records = sortedRecords.flatMap { $0 }
+                    output?.present(records: sortedRecords)
+
+                    // cache the accumulated records, since response and parse is success
+                    // clear existing cache first
                     try cacheWorker.clearCache()
                     try? cacheWorker.cache(records: self.records)
                 } catch {
                     output?.showAlert(title: Strings.ERROR_TITLE, message: error.localizedDescription)
-                    if let cachedRecords = cacheWorker.loadCachedRecords() {
-                        self.records = cachedRecords
+                    if records.count == 0 {
+                        loadFromCache()
                     }
                 }
             }
         } else {
-            output?.showAlert(title: Strings.ERROR_TITLE, message: error?.localizedDescription ?? "Unable to fetch Records")
-            if let cachedRecords = cacheWorker.loadCachedRecords() {
-                self.records = cachedRecords
+            if records.count == 0 {
+                loadFromCache()
             }
-
         }
+    }
 
-        let sortedRecords = sort(records: self.records)
-        self.records = sortedRecords.flatMap { $0 }
-
-        output?.present(records: sortedRecords)
+    /// loads UsageRecords from cache and sets the records property
+    private func loadFromCache() {
+        if let cachedRecords = cacheWorker.loadCachedRecords() {
+            self.records = cachedRecords
+            let sortedRecords = sort(records: self.records)
+            self.records = sortedRecords.flatMap { $0 }
+            isDisplayingCachedData = true
+            output?.present(records: sortedRecords)
+        }
     }
 
     /// returns 2D array  of  arrays of UsageRecord objects. Each array sorted according to year
