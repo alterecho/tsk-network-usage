@@ -33,6 +33,7 @@ class UsageMappingWorker: UsageMappingWorkerProtocol {
         }
         do {
             let date = try Models.Date(value: quarterValue)
+
             let record = Models.UsageRecord(volumeOfData: dict[Models.UsageResponse.ID.dataVolume]?.numericValue,
                                             date: date,
                                             id: id)
@@ -40,6 +41,9 @@ class UsageMappingWorker: UsageMappingWorkerProtocol {
         } catch {
             throw error
         }
+
+        
+
     }
 
     private func convert(value: Models.AnyValue, to type: Models.UsageResponse.DataType) throws -> Models.AnyValue {

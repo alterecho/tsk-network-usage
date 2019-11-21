@@ -41,6 +41,7 @@
 		F1A1ED9A237C549D003CFF99 /* UsageMappingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */; };
 		F1A1ED9B237C555F003CFF99 /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */; };
 		F1E35FDA2385867D00A7FFB6 /* UsageCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E35FD92385867D00A7FFB6 /* UsageCacheWorker.swift */; };
+		F1E35FDC238634BE00A7FFB6 /* UsageCacheWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E35FDB238634BE00A7FFB6 /* UsageCacheWorkerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageAPIWorker.swift; path = "Network usage/UsageView/workers/UsageAPIWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageMappingWorker.swift; path = "Network usage/UsageView/workers/UsageMappingWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1E35FD92385867D00A7FFB6 /* UsageCacheWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageCacheWorker.swift; path = "Network usage/UsageView/workers/UsageCacheWorker.swift"; sourceTree = SOURCE_ROOT; };
+		F1E35FDB238634BE00A7FFB6 /* UsageCacheWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCacheWorkerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				F1516DA223803E0E00737F83 /* UtilsTest.swift */,
 				F10FF6A3237A9829006F0E31 /* DecodableTests.swift */,
 				F1516D9D23802F9A00737F83 /* UsageMappingWorkerTests.swift */,
+				F1E35FDB238634BE00A7FFB6 /* UsageCacheWorkerTests.swift */,
 				F1516DA62380400300737F83 /* vip tests */,
 				F165E47F237AA0DD00CC87AA /* Info.plist */,
 			);
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E35FDC238634BE00A7FFB6 /* UsageCacheWorkerTests.swift in Sources */,
 				F1516DA1238035EC00737F83 /* Errors.swift in Sources */,
 				F1516D9E23802F9A00737F83 /* UsageMappingWorkerTests.swift in Sources */,
 				F1516DA523803FF900737F83 /* UsagePresenterTests.swift in Sources */,
