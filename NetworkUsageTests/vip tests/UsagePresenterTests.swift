@@ -12,36 +12,44 @@ import XCTest
 class UsagePresenterTests: XCTestCase {
     var presenter: UsagePresenterInputProtocol?
 
-    var updateCallExpectation: XCTestExpectation?
-    var showAlertExpectation: XCTestExpectation?
+    var callExpectation: XCTestExpectation?
 
     override func setUp() {
         presenter = UsagePresenter()
         presenter?.output = self
     }
 
-    func testUpdateCall() {
-        updateCallExpectation = expectation(description: "expect update called")
+    func testDelegateCalls() {
+        callExpectation = expectation(description: "update call expectation")
         presenter?.present(records: [])
         waitForExpectations(timeout: 1.0)
-        
-    }
-
-    func testShowAlertCall() {
-        showAlertExpectation = expectation(description: "expect show alert called")
+        callExpectation = expectation(description: "show alert expectation")
         presenter?.showAlert(title: "title", message: "message")
         waitForExpectations(timeout: 1.0)
+        callExpectation = expectation(description: "show loading expectation")
+        presenter?.showLoading()
+        waitForExpectations(timeout: 1.0)
+        callExpectation = expectation(description: "hide loading expectation")
+        presenter?.hideLoading()
+        waitForExpectations(timeout: 1.0)
     }
-    
 }
 
 
 extension UsagePresenterTests: UsagePresenterOutputProtocol {
+    func showLoading() {
+        callExpectation?.fulfill()
+    }
+
+    func hideLoading() {
+        callExpectation?.fulfill()
+    }
+
     func update(vm: UsageViewVM) {
-        updateCallExpectation?.fulfill()
+        callExpectation?.fulfill()
     }
 
     func showAlert(title: String, message: String) {
-        showAlertExpectation?.fulfill()
+        callExpectation?.fulfill()
     }
 }
