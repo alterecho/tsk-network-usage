@@ -15,6 +15,10 @@ class UsageCacheWorker: UsageCacheWorkerProtocol {
         coreData = CoreDataStore.shared
     }
 
+    func cache(links: Models.UsageResponse.Result.PageLinks) {
+        
+    }
+
     func cache(records: [Models.UsageRecord]) throws {
         try coreData.save(records: records)
     }
