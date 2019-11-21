@@ -35,7 +35,7 @@ protocol UsageAPIWorkerProtocol {
     /// change the data offset if required
     var offset: Int { get set }
     /// change the resourceID if required
-    var resourceID: String? { get set }
+    var resourceID: String { get set }
 
     func fetchUsageData(completionHandler: @escaping (Models.UsageResponse?, Error?) -> ()) throws
 }

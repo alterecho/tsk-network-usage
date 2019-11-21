@@ -12,5 +12,10 @@ import Foundation
 class URLStrings {
     static let base = "https://data.gov.sg"
     static let dataPath = "/api/action/datastore_search"
-    
+}
+
+class URLs {
+    static func constructURL(path: String) -> URL? {
+        return URL(string: URLStrings.base + path)
+    }
 }
