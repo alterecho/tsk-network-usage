@@ -19,39 +19,28 @@ class CoreDataStore {
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error {
                 fatalError(error.localizedDescription)
-            } else {
-//                do {
-//                    let record = Models.UsageRecord(volumeOfData: 10.0, date: try Models.Date(string: "1990-Q1"), id: "dfsfg")
-//                    self?.save(records: [record])
-//                    self?.printAll()
-//                } catch {
-//                    print(error)
-//                }
-
             }
         }
     }
     
-    private func printRecords() {
-        let context = container.viewContext
-        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "UsageRecord")
-        do {
-            let result = try context.fetch(req)
-            try result.forEach { (res) in
-                if let mo = res as? NSManagedObject {
-                    let usageRecord = try Models.UsageRecord(managedObject: mo)
-                    print(usageRecord)
-                } else {
-                    throw Errors.generic("fetch result not NSManagedObject")
-                }
-
-            }
-        } catch {
-            print(error)
-        }
-
-
-    }
+//    private func printRecords() {
+//        let context = container.viewContext
+//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "UsageRecord")
+//        do {
+//            let result = try context.fetch(req)
+//            try result.forEach { (res) in
+//                if let mo = res as? NSManagedObject {
+//                    let usageRecord = try Models.UsageRecord(managedObject: mo)
+//                    print(usageRecord)
+//                } else {
+//                    throw Errors.generic("fetch result not NSManagedObject")
+//                }
+//
+//            }
+//        } catch {
+//            print(error)
+//        }
+//    }
 
     func save(records: [Models.UsageRecord]) throws {
         let context = container.viewContext

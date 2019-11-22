@@ -9,20 +9,20 @@
 import UIKit
 
 /// To show common alerts
-class AlertSystem: UIViewController {
+public class AlertSystem: UIViewController {
     static private var window: UIWindow?
     static private var alertVC: UIAlertController?
 
-    static func alert(title: String?, message: String?) {
+    public static func alert(title: String?, message: String?) {
         alertVC?.dismiss(animated: false, completion: nil)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = UIViewController()
 
-        alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        guard let alertViewController = alertVC else {
-            return
-        }
+        let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC = alertViewController
+        alertVC?.view.accessibilityIdentifier = "alertsystem"
+
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             window = nil
         }

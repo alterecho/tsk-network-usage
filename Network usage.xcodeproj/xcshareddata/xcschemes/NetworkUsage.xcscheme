@@ -39,6 +39,16 @@
                ReferencedContainer = "container:Network usage.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1F6EADA238835B10034C68D"
+               BuildableName = "NetworkUsageUITests.xctest"
+               BlueprintName = "NetworkUsageUITests"
+               ReferencedContainer = "container:Network usage.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -10,9 +10,9 @@ import Foundation
 
 class UsageInteractor: UsageInteractorInputProtocol {
     var output: UsagePresenterInputProtocol?
-    let apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker()
-    let cacheWorker: UsageCacheWorkerProtocol = UsageCacheWorker()
-    let mappingWorker: UsageMappingWorker = UsageMappingWorker()
+    let apiWorker: UsageAPIWorkerProtocol
+    let cacheWorker: UsageCacheWorkerProtocol
+    let mappingWorker: UsageMappingWorker
 
     /// the records that are accumulated and is being displayed
     private var records = [Models.UsageRecord]()
@@ -28,6 +28,12 @@ class UsageInteractor: UsageInteractorInputProtocol {
             }
         }
     }
+
+    init(apiWorker: UsageAPIWorkerProtocol = UsageAPIWorker(), cacheWorker: UsageCacheWorkerProtocol = UsageCacheWorker(),  mappingWorker: UsageMappingWorker = UsageMappingWorker()) {
+        self.apiWorker = apiWorker
+        self.cacheWorker = cacheWorker
+        self.mappingWorker = mappingWorker
+    }
     
     func load() {
         fetchData()
@@ -38,8 +44,6 @@ class UsageInteractor: UsageInteractorInputProtocol {
             return
         }
         fetchData()
-
-
     }
 
     private func fetchData() {

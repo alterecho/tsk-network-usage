@@ -20,7 +20,10 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
     var startURL: URL? = nil
     var nextURL: URL? = nil
 
-    init() {
+    private let session: URLSessionProtocol
+
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
         //start resourceID
         resourceID = "a807b7ab-6cad-4aa6-87d0-e283a7353a0f"
         constructURLs()
@@ -36,7 +39,7 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
         if let nextFetchPath = nextFetchPath {
             nextURL = URL(string: URLStrings.base + nextFetchPath)
         } else {
-            nextURL = nil
+            nextURL = startURL
         }
     }
 
@@ -51,7 +54,7 @@ class UsageAPIWorker: UsageAPIWorkerProtocol {
         }
 
         let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
+        session.dataTask(with: request) { [weak self] (data, response, error) in
             if let data = data {
                 do {
                     let usageResponse = try JSONDecoder().decode(Models.UsageResponse.self, from: data)
