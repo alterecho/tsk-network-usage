@@ -42,6 +42,12 @@
 		F1A1ED99237C549D003CFF99 /* UsageAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */; };
 		F1A1ED9A237C549D003CFF99 /* UsageMappingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */; };
 		F1A1ED9B237C555F003CFF99 /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1ED7D237BFE98003CFF99 /* UsageViewController.swift */; };
+		F1B266902388ED9900706172 /* LaunchArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2668F2388ED9900706172 /* LaunchArgs.swift */; };
+		F1B266912388EDCF00706172 /* LaunchArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2668F2388ED9900706172 /* LaunchArgs.swift */; };
+		F1B266922388EDD000706172 /* LaunchArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2668F2388ED9900706172 /* LaunchArgs.swift */; };
+		F1B266942388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */; };
+		F1B266952388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */; };
+		F1B266962388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */; };
 		F1E35FDA2385867D00A7FFB6 /* UsageCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E35FD92385867D00A7FFB6 /* UsageCacheWorker.swift */; };
 		F1E35FDC238634BE00A7FFB6 /* UsageCacheWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E35FDB238634BE00A7FFB6 /* UsageCacheWorkerTests.swift */; };
 		F1F6EAD423880F5F0034C68D /* UsageInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6EAD323880F5F0034C68D /* UsageInteractorTests.swift */; };
@@ -89,7 +95,6 @@
 		F1516D9F2380343700737F83 /* NetworkUsageTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUsageTestCase.swift; sourceTree = "<group>"; };
 		F1516DA223803E0E00737F83 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
 		F1516DA423803FF900737F83 /* UsagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagePresenterTests.swift; sourceTree = "<group>"; };
-		F165E47B237AA0DD00CC87AA /* NetworkUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NetworkUsageTests.xctest; path = "/Users/v.a.jayachandran/Documents/projects/Network usage/build/Debug-iphoneos/NetworkUsageTests.xctest"; sourceTree = "<absolute>"; };
 		F165E47F237AA0DD00CC87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17853742380F978008C5EC0 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
 		F1785380238106B9008C5EC0 /* UsageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsageTableViewCell.xib; path = "Network usage/UsageView/views/cells/UsageTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -105,11 +110,14 @@
 		F1A1ED94237C547C003CFF99 /* UsageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageConfigurator.swift; path = "Network usage/UsageView/UsageConfigurator.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED97237C549D003CFF99 /* UsageAPIWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageAPIWorker.swift; path = "Network usage/UsageView/workers/UsageAPIWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1A1ED98237C549D003CFF99 /* UsageMappingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsageMappingWorker.swift; path = "Network usage/UsageView/workers/UsageMappingWorker.swift"; sourceTree = SOURCE_ROOT; };
+		F1B2668D2388E37000706172 /* NetworkUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkUsageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B2668E2388E37000706172 /* NetworkUsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkUsageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B2668F2388ED9900706172 /* LaunchArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchArgs.swift; path = "Network usage/LaunchArgs.swift"; sourceTree = SOURCE_ROOT; };
+		F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessibilityIdentifiers.swift; path = "Network usage/AccessibilityIdentifiers.swift"; sourceTree = SOURCE_ROOT; };
 		F1E35FD92385867D00A7FFB6 /* UsageCacheWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsageCacheWorker.swift; path = "Network usage/UsageView/workers/UsageCacheWorker.swift"; sourceTree = SOURCE_ROOT; };
 		F1E35FDB238634BE00A7FFB6 /* UsageCacheWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCacheWorkerTests.swift; sourceTree = "<group>"; };
 		F1F6EAD323880F5F0034C68D /* UsageInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageInteractorTests.swift; sourceTree = "<group>"; };
 		F1F6EAD523882C680034C68D /* AlertSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemTests.swift; sourceTree = "<group>"; };
-		F1F6EADB238835B10034C68D /* NetworkUsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NetworkUsageUITests.xctest; path = "/Users/v.a.jayachandran/Documents/projects/Network usage/build/Debug-iphoneos/NetworkUsageUITests.xctest"; sourceTree = "<absolute>"; };
 		F1F6EADF238835B10034C68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +153,8 @@
 				F12C9043237A6A9F00582B05 /* Network Usage */,
 				F165E47C237AA0DD00CC87AA /* NetworkUsageTests */,
 				F1F6EADC238835B10034C68D /* NetworkUsageUITests */,
+				F1B2668D2388E37000706172 /* NetworkUsageTests.xctest */,
+				F1B2668E2388E37000706172 /* NetworkUsageUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +164,8 @@
 				F12C907D237A6C4000582B05 /* json */,
 				F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
 				F12C9044237A6A9F00582B05 /* AppDelegate.swift */,
+				F1B2668F2388ED9900706172 /* LaunchArgs.swift */,
+				F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */,
 				F12C895C23842A5300B2F68C /* CoreDataStore.swift */,
 				F12C8959238428E900B2F68C /* NetworkUsage.xcdatamodeld */,
 				F10FF6A1237A941A006F0E31 /* URLStrings.swift */,
@@ -302,7 +314,7 @@
 			);
 			name = NetworkUsageTests;
 			productName = NetworkUsageTests;
-			productReference = F165E47B237AA0DD00CC87AA /* NetworkUsageTests.xctest */;
+			productReference = F1B2668D2388E37000706172 /* NetworkUsageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F1F6EADA238835B10034C68D /* NetworkUsageUITests */ = {
@@ -320,7 +332,7 @@
 			);
 			name = NetworkUsageUITests;
 			productName = NetworkUsageUITests;
-			productReference = F1F6EADB238835B10034C68D /* NetworkUsageUITests.xctest */;
+			productReference = F1B2668E2388E37000706172 /* NetworkUsageUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -402,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B266902388ED9900706172 /* LaunchArgs.swift in Sources */,
 				F178538623810967008C5EC0 /* UsageTableViewCellVM.swift in Sources */,
 				F1A1ED8D237C0355003CFF99 /* Models.swift in Sources */,
 				F1A1ED91237C5207003CFF99 /* UsageViewVM.swift in Sources */,
@@ -416,6 +429,7 @@
 				F1A1ED95237C547C003CFF99 /* UsageConfigurator.swift in Sources */,
 				F12C9045237A6A9F00582B05 /* AppDelegate.swift in Sources */,
 				F12C89582384268200B2F68C /* Strings.swift in Sources */,
+				F1B266942388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */,
 				F1A1ED99237C549D003CFF99 /* UsageAPIWorker.swift in Sources */,
 				F1A1ED86237C0273003CFF99 /* Errors.swift in Sources */,
 				F145E1092387522E00F1029D /* URLSessionProtocol.swift in Sources */,
@@ -434,7 +448,9 @@
 				F145E10623874F7A00F1029D /* UsageAPIWorkerTests.swift in Sources */,
 				F1E35FDC238634BE00A7FFB6 /* UsageCacheWorkerTests.swift in Sources */,
 				F1516DA1238035EC00737F83 /* Errors.swift in Sources */,
+				F1B266912388EDCF00706172 /* LaunchArgs.swift in Sources */,
 				F1516D9E23802F9A00737F83 /* UsageMappingWorkerTests.swift in Sources */,
+				F1B266952388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */,
 				F1516DA523803FF900737F83 /* UsagePresenterTests.swift in Sources */,
 				F1F6EAD423880F5F0034C68D /* UsageInteractorTests.swift in Sources */,
 				F1516DA323803E0E00737F83 /* UtilsTest.swift in Sources */,
@@ -449,6 +465,8 @@
 			files = (
 				F1F6EAE5238835C70034C68D /* AlertSystemTests.swift in Sources */,
 				F1F6EAE6238837CF0034C68D /* AlertSystem.swift in Sources */,
+				F1B266922388EDD000706172 /* LaunchArgs.swift in Sources */,
+				F1B266962388F54B00706172 /* AccessibilityIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

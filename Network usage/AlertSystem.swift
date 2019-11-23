@@ -21,7 +21,7 @@ public class AlertSystem: UIViewController {
 
         let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC = alertViewController
-        alertVC?.view.accessibilityIdentifier = "alertsystem"
+        alertVC?.view.accessibilityIdentifier = AccessibilityIdentifiers.alertSystem
 
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             window = nil

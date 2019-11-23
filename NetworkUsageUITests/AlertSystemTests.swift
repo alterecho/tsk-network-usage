@@ -29,10 +29,10 @@ class AlertSystemTests: XCTestCase {
 
     func testAlertShows() {
         app = XCUIApplication()
+        app?.launchArguments.append(LaunchArgs.testAlert)
         app?.launch()
-        AlertSystem.alert(title: "title", message: "message")
-        print(app?.alerts)
-        let query = app?.otherElements["alertsystem"]
+
+        let query = app?.alerts[AccessibilityIdentifiers.alertSystem]
         XCTAssert(query?.waitForExistence(timeout: 5.0) ?? false)
     }
 }

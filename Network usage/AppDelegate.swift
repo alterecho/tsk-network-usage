@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        handleTestArgs()
         return true
+    }
+}
+
+extension AppDelegate {
+    func handleTestArgs() {
+        if ProcessInfo.processInfo.arguments.contains(LaunchArgs.testAlert) {
+            AlertSystem.alert(title: "tst", message: "alert")
+        }
     }
 }
 

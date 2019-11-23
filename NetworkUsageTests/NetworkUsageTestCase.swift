@@ -9,6 +9,8 @@
 import XCTest
 @testable import NetworkUsage
 
+
+/// class that is subclassed by some tests
 class NetworkUsageTestCase: XCTestCase {
 
     override func setUp() {
