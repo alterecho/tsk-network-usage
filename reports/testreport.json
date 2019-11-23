@@ -1,0 +1,1452 @@
+{
+    "coveredLines": 912,
+    "lineCoverage": 0.86363636363636365,
+    "targets": [
+        {
+            "coveredLines": 176,
+            "lineCoverage": 0.88442211055276387,
+            "files": [
+                {
+                    "coveredLines": 36,
+                    "lineCoverage": 0.92307692307692313,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/vip tests\/UsageInteractorTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 26,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageInteractorTests.setUp() -> ()",
+                            "executableLines": 5
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 32,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageInteractorTests.tearDown() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 11,
+                            "lineCoverage": 1,
+                            "lineNumber": 36,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageInteractorTests.testLoad() -> ()",
+                            "executableLines": 11
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 48,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageInteractorTests.testReachedEndOfPage() -> ()",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 62,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageInteractorTests.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 66,
+                            "executionCount": 0,
+                            "name": "NetworkUsageTests.UsageInteractorTests.showAlert(title: Swift.String, message: Swift.String) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 70,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageInteractorTests.showLoading() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 74,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageInteractorTests.hideLoading() -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "UsageInteractorTests.swift",
+                    "executableLines": 39
+                },
+                {
+                    "coveredLines": 10,
+                    "lineCoverage": 0.76923076923076927,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/NetworkUsageTestCase.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 16,
+                            "executionCount": 0,
+                            "name": "NetworkUsageTests.NetworkUsageTestCase.setUp() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 20,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.NetworkUsageTestCase.tearDown() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 24,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.NetworkUsageTestCase.mockUsageResponseData() throws -> Foundation.Data",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 28,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.NetworkUsageTestCase.mockUsageResponse() throws -> NetworkUsage.Models.UsageResponse",
+                            "executableLines": 4
+                        }
+                    ],
+                    "name": "NetworkUsageTestCase.swift",
+                    "executableLines": 13
+                },
+                {
+                    "coveredLines": 30,
+                    "lineCoverage": 1,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/vip tests\/UsagePresenterTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 17,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.setUp() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 14,
+                            "lineCoverage": 1,
+                            "lineNumber": 22,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.testDelegateCalls() -> ()",
+                            "executableLines": 14
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 40,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.showLoading() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 44,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.hideLoading() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 48,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.update(vm: NetworkUsage.UsageViewVM) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 52,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsagePresenterTests.showAlert(title: Swift.String, message: Swift.String) -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "UsagePresenterTests.swift",
+                    "executableLines": 30
+                },
+                {
+                    "coveredLines": 14,
+                    "lineCoverage": 0.82352941176470584,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/DecodableTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 14,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.DecodableTests.setUp() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 18,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.DecodableTests.tearDown() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 0.72727272727272729,
+                            "lineNumber": 22,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.DecodableTests.testUsageResponseDecodable() -> ()",
+                            "executableLines": 11
+                        }
+                    ],
+                    "name": "DecodableTests.swift",
+                    "executableLines": 17
+                },
+                {
+                    "coveredLines": 23,
+                    "lineCoverage": 0.85185185185185186,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/UsageAPIWorkerTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 15,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.MockDataTask.resume() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 24,
+                            "executionCount": 1,
+                            "name": "",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 28,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.MockSession.dataTask(with: Foundation.URLRequest, completionHandler: (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> ()) -> NetworkUsage.URLSessionDataTaskProtocol",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 38,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageAPIWorkerTests.setUp() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 42,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageAPIWorkerTests.tearDown() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 1,
+                            "lineNumber": 46,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageAPIWorkerTests.testDataBeingFetched() -> ()",
+                            "executableLines": 7
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 47,
+                            "executionCount": 0,
+                            "name": "closure #1 (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsageTests.UsageAPIWorkerTests.testDataBeingFetched() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 51,
+                            "executionCount": 1,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsageTests.UsageAPIWorkerTests.testDataBeingFetched() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 51,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () -> Swift.String in NetworkUsageTests.UsageAPIWorkerTests.testDataBeingFetched() -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageAPIWorkerTests.swift",
+                    "executableLines": 27
+                },
+                {
+                    "coveredLines": 9,
+                    "lineCoverage": 0.81818181818181823,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/UtilsTest.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 0.88888888888888884,
+                            "lineNumber": 14,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UtilsTest.testThatUtilsLoadsData() -> ()",
+                            "executableLines": 9
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 17,
+                            "executionCount": 1,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsageTests.UtilsTest.testThatUtilsLoadsData() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 17,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () -> Swift.String in NetworkUsageTests.UtilsTest.testThatUtilsLoadsData() -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UtilsTest.swift",
+                    "executableLines": 11
+                },
+                {
+                    "coveredLines": 39,
+                    "lineCoverage": 0.88636363636363635,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/UsageCacheWorkerTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 11,
+                            "lineCoverage": 1,
+                            "lineNumber": 17,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageCacheWorkerTests.setUp() -> ()",
+                            "executableLines": 11
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 0.88888888888888884,
+                            "lineNumber": 29,
+                            "executionCount": 2,
+                            "name": "NetworkUsageTests.UsageCacheWorkerTests.tearDown() -> ()",
+                            "executableLines": 9
+                        },
+                        {
+                            "coveredLines": 9,
+                            "lineCoverage": 0.90000000000000002,
+                            "lineNumber": 39,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageCacheWorkerTests.testRecordsCaching() -> ()",
+                            "executableLines": 10
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 43,
+                            "executionCount": 1,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsageTests.UsageCacheWorkerTests.testRecordsCaching() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 43,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () -> Swift.String in NetworkUsageTests.UsageCacheWorkerTests.testRecordsCaching() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 9,
+                            "lineCoverage": 0.90000000000000002,
+                            "lineNumber": 50,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageCacheWorkerTests.testCacheClearing() -> ()",
+                            "executableLines": 10
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 55,
+                            "executionCount": 1,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsageTests.UsageCacheWorkerTests.testCacheClearing() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 55,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () -> Swift.String in NetworkUsageTests.UsageCacheWorkerTests.testCacheClearing() -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageCacheWorkerTests.swift",
+                    "executableLines": 44
+                },
+                {
+                    "coveredLines": 15,
+                    "lineCoverage": 0.83333333333333337,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageTests\/UsageMappingWorkerTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 16,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageMappingWorkerTests.setUp() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 10,
+                            "lineCoverage": 0.90909090909090906,
+                            "lineNumber": 21,
+                            "executionCount": 1,
+                            "name": "NetworkUsageTests.UsageMappingWorkerTests.testCreatingRecordsFromResponse() -> ()",
+                            "executableLines": 11
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 22,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> NetworkUsage.UsageMappingWorker in NetworkUsageTests.UsageMappingWorkerTests.testCreatingRecordsFromResponse() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 26,
+                            "executionCount": 1,
+                            "name": "implicit closure #2 () throws -> Swift.Bool in NetworkUsageTests.UsageMappingWorkerTests.testCreatingRecordsFromResponse() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 26,
+                            "executionCount": 0,
+                            "name": "implicit closure #3 () -> Swift.String in NetworkUsageTests.UsageMappingWorkerTests.testCreatingRecordsFromResponse() -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageMappingWorkerTests.swift",
+                    "executableLines": 18
+                }
+            ],
+            "name": "NetworkUsageTests.xctest",
+            "executableLines": 199,
+            "buildProductPath": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/build\/Build\/Products\/Debug-iphonesimulator\/NetworkUsage.app\/PlugIns\/NetworkUsageTests.xctest\/NetworkUsageTests"
+        },
+        {
+            "coveredLines": 43,
+            "lineCoverage": 0.91489361702127658,
+            "files": [
+                {
+                    "coveredLines": 21,
+                    "lineCoverage": 0.875,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/AlertSystem.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 21,
+                            "lineCoverage": 1,
+                            "lineNumber": 16,
+                            "executionCount": 1,
+                            "name": "static NetworkUsageUITests.AlertSystem.alert(title: Swift.Optional<Swift.String>, message: Swift.Optional<Swift.String>) -> ()",
+                            "executableLines": 21
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 26,
+                            "executionCount": 0,
+                            "name": "closure #1 (__C.UIAlertAction) -> () in static NetworkUsageUITests.AlertSystem.alert(title: Swift.Optional<Swift.String>, message: Swift.Optional<Swift.String>) -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "AlertSystem.swift",
+                    "executableLines": 24
+                },
+                {
+                    "coveredLines": 22,
+                    "lineCoverage": 0.95652173913043481,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/NetworkUsageUITests\/AlertSystemTests.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 10,
+                            "lineCoverage": 1,
+                            "lineNumber": 15,
+                            "executionCount": 1,
+                            "name": "NetworkUsageUITests.AlertSystemTests.setUp() -> ()",
+                            "executableLines": 10
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 26,
+                            "executionCount": 1,
+                            "name": "NetworkUsageUITests.AlertSystemTests.tearDown() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 30,
+                            "executionCount": 1,
+                            "name": "NetworkUsageUITests.AlertSystemTests.testAlertShows() -> ()",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 36,
+                            "executionCount": 1,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsageUITests.AlertSystemTests.testAlertShows() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 36,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () throws -> Swift.Bool in implicit closure #1 () throws -> Swift.Bool in NetworkUsageUITests.AlertSystemTests.testAlertShows() -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "AlertSystemTests.swift",
+                    "executableLines": 23
+                }
+            ],
+            "name": "NetworkUsageUITests.xctest",
+            "executableLines": 47,
+            "buildProductPath": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/build\/Build\/Products\/Debug-iphonesimulator\/NetworkUsageUITests-Runner.app\/PlugIns\/NetworkUsageUITests.xctest\/NetworkUsageUITests"
+        },
+        {
+            "coveredLines": 693,
+            "lineCoverage": 0.85555555555555551,
+            "files": [
+                {
+                    "coveredLines": 103,
+                    "lineCoverage": 0.76296296296296295,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/UsageInteractor.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 1,
+                            "lineNumber": 23,
+                            "executionCount": 13,
+                            "name": "NetworkUsage.UsageInteractor.(isLoading in _F2B3DEE5757B081AC9D81EA0BDDF3B68).didset : Swift.Bool",
+                            "executableLines": 7
+                        },
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 32,
+                            "executionCount": 4,
+                            "name": "",
+                            "executableLines": 5
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 38,
+                            "executionCount": 3,
+                            "name": "NetworkUsage.UsageInteractor.load() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 0.83333333333333337,
+                            "lineNumber": 42,
+                            "executionCount": 4,
+                            "name": "NetworkUsage.UsageInteractor.reachedEndOfPage() -> ()",
+                            "executableLines": 6
+                        },
+                        {
+                            "coveredLines": 11,
+                            "lineCoverage": 0.84615384615384615,
+                            "lineNumber": 49,
+                            "executionCount": 7,
+                            "name": "NetworkUsage.UsageInteractor.(fetchData in _F2B3DEE5757B081AC9D81EA0BDDF3B68)() -> ()",
+                            "executableLines": 13
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 52,
+                            "executionCount": 6,
+                            "name": "closure #1 (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageInteractor.(fetchData in _F2B3DEE5757B081AC9D81EA0BDDF3B68)() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 27,
+                            "lineCoverage": 0.65853658536585369,
+                            "lineNumber": 64,
+                            "executionCount": 6,
+                            "name": "NetworkUsage.UsageInteractor.(resultsCompletionHandler in _F2B3DEE5757B081AC9D81EA0BDDF3B68)(response: Swift.Optional<NetworkUsage.Models.UsageResponse>, error: Swift.Optional<Swift.Error>) -> ()",
+                            "executableLines": 41
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 85,
+                            "executionCount": 51,
+                            "name": "closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<NetworkUsage.Models.UsageRecord> in NetworkUsage.UsageInteractor.(resultsCompletionHandler in _F2B3DEE5757B081AC9D81EA0BDDF3B68)(response: Swift.Optional<NetworkUsage.Models.UsageResponse>, error: Swift.Optional<Swift.Error>) -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 107,
+                            "executionCount": 0,
+                            "name": "NetworkUsage.UsageInteractor.(loadFromCache in _F2B3DEE5757B081AC9D81EA0BDDF3B68)() -> ()",
+                            "executableLines": 9
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 111,
+                            "executionCount": 0,
+                            "name": "closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<NetworkUsage.Models.UsageRecord> in NetworkUsage.UsageInteractor.(loadFromCache in _F2B3DEE5757B081AC9D81EA0BDDF3B68)() -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 34,
+                            "lineCoverage": 1,
+                            "lineNumber": 119,
+                            "executionCount": 6,
+                            "name": "NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 34
+                        },
+                        {
+                            "coveredLines": 6,
+                            "lineCoverage": 1,
+                            "lineNumber": 120,
+                            "executionCount": 173,
+                            "name": "closure #1 (NetworkUsage.Models.UsageRecord, NetworkUsage.Models.UsageRecord) -> Swift.Bool in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 6
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 122,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.Int in closure #1 (NetworkUsage.Models.UsageRecord, NetworkUsage.Models.UsageRecord) -> Swift.Bool in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 122,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () throws -> Swift.Int in closure #1 (NetworkUsage.Models.UsageRecord, NetworkUsage.Models.UsageRecord) -> Swift.Bool in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 124,
+                            "executionCount": 0,
+                            "name": "implicit closure #3 () throws -> Swift.Int in closure #1 (NetworkUsage.Models.UsageRecord, NetworkUsage.Models.UsageRecord) -> Swift.Bool in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 124,
+                            "executionCount": 0,
+                            "name": "implicit closure #4 () throws -> Swift.Int in closure #1 (NetworkUsage.Models.UsageRecord, NetworkUsage.Models.UsageRecord) -> Swift.Bool in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 143,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.Array<NetworkUsage.Models.UsageRecord> in NetworkUsage.UsageInteractor.sort(records: Swift.Array<NetworkUsage.Models.UsageRecord>) -> Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageInteractor.swift",
+                    "executableLines": 135
+                },
+                {
+                    "coveredLines": 73,
+                    "lineCoverage": 0.86904761904761907,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/UsageViewController.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 11,
+                            "lineCoverage": 1,
+                            "lineNumber": 19,
+                            "executionCount": 4,
+                            "name": "NetworkUsage.UsageViewController.(vm in _FCC0648697E071B37C7758FDD6E30F63).didset : Swift.Optional<NetworkUsage.UsageViewVM>",
+                            "executableLines": 11
+                        },
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 1,
+                            "lineNumber": 20,
+                            "executionCount": 39,
+                            "name": "closure #1 (NetworkUsage.UsageTableViewCellVM.Section) -> () in NetworkUsage.UsageViewController.(vm in _FCC0648697E071B37C7758FDD6E30F63).didset : Swift.Optional<NetworkUsage.UsageViewVM>",
+                            "executableLines": 7
+                        },
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 21,
+                            "executionCount": 139,
+                            "name": "closure #1 (NetworkUsage.UsageTableViewCellVM) -> () in closure #1 (NetworkUsage.UsageTableViewCellVM.Section) -> () in NetworkUsage.UsageViewController.(vm in _FCC0648697E071B37C7758FDD6E30F63).didset : Swift.Optional<NetworkUsage.UsageViewVM>",
+                            "executableLines": 5
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 32,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.UsageViewController.viewDidLoad() -> ()",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 41,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.UsageViewController.viewWillAppear(Swift.Bool) -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 0.5,
+                            "lineNumber": 46,
+                            "executionCount": 0,
+                            "name": "",
+                            "executableLines": 6
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 58,
+                            "executionCount": 10,
+                            "name": "NetworkUsage.UsageViewController.numberOfSections(in: __C.UITableView) -> Swift.Int",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 59,
+                            "executionCount": 6,
+                            "name": "implicit closure #1 () throws -> Swift.Int in NetworkUsage.UsageViewController.numberOfSections(in: __C.UITableView) -> Swift.Int",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 62,
+                            "executionCount": 59,
+                            "name": "NetworkUsage.UsageViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -> Swift.Int",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 63,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.Int in NetworkUsage.UsageViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -> Swift.Int",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 66,
+                            "executionCount": 96,
+                            "name": "NetworkUsage.UsageViewController.tableView(_: __C.UITableView, titleForHeaderInSection: Swift.Int) -> Swift.Optional<Swift.String>",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 13,
+                            "lineCoverage": 0.9285714285714286,
+                            "lineNumber": 70,
+                            "executionCount": 100,
+                            "name": "NetworkUsage.UsageViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -> __C.UITableViewCell",
+                            "executableLines": 14
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 75,
+                            "executionCount": 9,
+                            "name": "implicit closure #1 () throws -> Swift.Bool in NetworkUsage.UsageViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -> __C.UITableViewCell",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 87,
+                            "executionCount": 0,
+                            "name": "NetworkUsage.UsageViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 93,
+                            "executionCount": 5,
+                            "name": "NetworkUsage.UsageViewController.showLoading() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 98,
+                            "executionCount": 4,
+                            "name": "NetworkUsage.UsageViewController.hideLoading() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 103,
+                            "executionCount": 4,
+                            "name": "NetworkUsage.UsageViewController.update(vm: NetworkUsage.UsageViewVM) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 107,
+                            "executionCount": 0,
+                            "name": "NetworkUsage.UsageViewController.showAlert(title: Swift.String, message: Swift.String) -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "UsageViewController.swift",
+                    "executableLines": 84
+                },
+                {
+                    "coveredLines": 9,
+                    "lineCoverage": 0.81818181818181823,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/Utils.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 9,
+                            "lineCoverage": 0.81818181818181823,
+                            "lineNumber": 13,
+                            "executionCount": 3,
+                            "name": "static NetworkUsage.Utils.loadData(resource: Swift.String, extension: Swift.String) throws -> Foundation.Data",
+                            "executableLines": 11
+                        }
+                    ],
+                    "name": "Utils.swift",
+                    "executableLines": 11
+                },
+                {
+                    "coveredLines": 115,
+                    "lineCoverage": 0.86466165413533835,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/workers\/UsageMappingWorker.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 16,
+                            "lineCoverage": 1,
+                            "lineNumber": 12,
+                            "executionCount": 7,
+                            "name": "NetworkUsage.UsageMappingWorker.records(from: NetworkUsage.Models.UsageResponse.Result) throws -> Swift.Array<NetworkUsage.Models.UsageRecord>",
+                            "executableLines": 16
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 21,
+                            "executionCount": 124,
+                            "name": "closure #1 (Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>) throws -> () in NetworkUsage.UsageMappingWorker.records(from: NetworkUsage.Models.UsageResponse.Result) throws -> Swift.Array<NetworkUsage.Models.UsageRecord>",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 12,
+                            "lineCoverage": 0.63157894736842102,
+                            "lineNumber": 29,
+                            "executionCount": 124,
+                            "name": "NetworkUsage.UsageMappingWorker.record(from: Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>) throws -> NetworkUsage.Models.UsageRecord",
+                            "executableLines": 19
+                        },
+                        {
+                            "coveredLines": 30,
+                            "lineCoverage": 0.75,
+                            "lineNumber": 49,
+                            "executionCount": 372,
+                            "name": "NetworkUsage.UsageMappingWorker.(convert in _D8A06161F4ECC85D6AAF2620696A808E)(value: NetworkUsage.Models.AnyValue, to: NetworkUsage.Models.UsageResponse.DataType) throws -> NetworkUsage.Models.AnyValue",
+                            "executableLines": 40
+                        },
+                        {
+                            "coveredLines": 21,
+                            "lineCoverage": 1,
+                            "lineNumber": 92,
+                            "executionCount": 7,
+                            "name": "NetworkUsage.UsageMappingWorker.(convert in _D8A06161F4ECC85D6AAF2620696A808E)(responseRecords: Swift.Array<Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>>, fields: Swift.Array<NetworkUsage.Models.UsageResponse.Result.Field>) throws -> Swift.Array<Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>>",
+                            "executableLines": 21
+                        },
+                        {
+                            "coveredLines": 18,
+                            "lineCoverage": 1,
+                            "lineNumber": 93,
+                            "executionCount": 124,
+                            "name": "closure #1 (Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>) throws -> Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue> in NetworkUsage.UsageMappingWorker.(convert in _D8A06161F4ECC85D6AAF2620696A808E)(responseRecords: Swift.Array<Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>>, fields: Swift.Array<NetworkUsage.Models.UsageResponse.Result.Field>) throws -> Swift.Array<Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>>",
+                            "executableLines": 18
+                        },
+                        {
+                            "coveredLines": 13,
+                            "lineCoverage": 0.9285714285714286,
+                            "lineNumber": 95,
+                            "executionCount": 372,
+                            "name": "closure #1 ((key: Swift.String, value: NetworkUsage.Models.AnyValue)) throws -> () in closure #1 (Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>) throws -> Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue> in NetworkUsage.UsageMappingWorker.(convert in _D8A06161F4ECC85D6AAF2620696A808E)(responseRecords: Swift.Array<Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>>, fields: Swift.Array<NetworkUsage.Models.UsageResponse.Result.Field>) throws -> Swift.Array<Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>>",
+                            "executableLines": 14
+                        },
+                        {
+                            "coveredLines": 1,
+                            "lineCoverage": 1,
+                            "lineNumber": 99,
+                            "executionCount": 744,
+                            "name": "closure #1 (NetworkUsage.Models.UsageResponse.Result.Field) -> Swift.Bool in closure #1 ((key: Swift.String, value: NetworkUsage.Models.AnyValue)) throws -> () in closure #1 (Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>) throws -> Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue> in NetworkUsage.UsageMappingWorker.(convert in _D8A06161F4ECC85D6AAF2620696A808E)(responseRecords: Swift.Array<Swift.Dictionary<Swift.String, NetworkUsage.Models.AnyValue>>, fields: Swift.Array<NetworkUsage.Models.UsageResponse.Result.Field>) throws -> Swift.Array<Swift.Dictionary<NetworkUsage.Models.UsageResponse.ID, NetworkUsage.Models.AnyValue>>",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageMappingWorker.swift",
+                    "executableLines": 133
+                },
+                {
+                    "coveredLines": 13,
+                    "lineCoverage": 0.76470588235294112,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/workers\/UsageCacheWorker.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 14,
+                            "executionCount": 6,
+                            "name": "",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 18,
+                            "executionCount": 8,
+                            "name": "NetworkUsage.UsageCacheWorker.cache(records: Swift.Array<NetworkUsage.Models.UsageRecord>) throws -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 0.5,
+                            "lineNumber": 22,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.UsageCacheWorker.loadCachedRecords() -> Swift.Optional<Swift.Array<NetworkUsage.Models.UsageRecord>>",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 31,
+                            "executionCount": 9,
+                            "name": "NetworkUsage.UsageCacheWorker.clearCache() throws -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "UsageCacheWorker.swift",
+                    "executableLines": 17
+                },
+                {
+                    "coveredLines": 10,
+                    "lineCoverage": 1,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network Usage\/AppDelegate.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 16,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional<Swift.Dictionary<__C.UIApplicationLaunchOptionsKey, Any>>) -> Swift.Bool",
+                            "executableLines": 5
+                        },
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 24,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.AppDelegate.handleTestArgs() -> ()",
+                            "executableLines": 5
+                        }
+                    ],
+                    "name": "AppDelegate.swift",
+                    "executableLines": 10
+                },
+                {
+                    "coveredLines": 7,
+                    "lineCoverage": 1,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/UsageConfigurator.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 1,
+                            "lineNumber": 14,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.UsageConfigurator.configure(viewController: NetworkUsage.UsageViewController, interactor: NetworkUsage.UsageInteractorInputProtocol, presenter: NetworkUsage.UsagePresenterInputProtocol) -> ()",
+                            "executableLines": 7
+                        }
+                    ],
+                    "name": "UsageConfigurator.swift",
+                    "executableLines": 7
+                },
+                {
+                    "coveredLines": 21,
+                    "lineCoverage": 0.875,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/AlertSystem.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 21,
+                            "lineCoverage": 1,
+                            "lineNumber": 16,
+                            "executionCount": 1,
+                            "name": "static NetworkUsageUITests.AlertSystem.alert(title: Swift.Optional<Swift.String>, message: Swift.Optional<Swift.String>) -> ()",
+                            "executableLines": 21
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 26,
+                            "executionCount": 0,
+                            "name": "closure #1 (__C.UIAlertAction) -> () in static NetworkUsageUITests.AlertSystem.alert(title: Swift.Optional<Swift.String>, message: Swift.Optional<Swift.String>) -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "AlertSystem.swift",
+                    "executableLines": 24
+                },
+                {
+                    "coveredLines": 57,
+                    "lineCoverage": 0.94999999999999996,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/UsagePresenter.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 23,
+                            "lineCoverage": 1,
+                            "lineNumber": 15,
+                            "executionCount": 5,
+                            "name": "NetworkUsage.UsagePresenter.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 23
+                        },
+                        {
+                            "coveredLines": 17,
+                            "lineCoverage": 0.94444444444444442,
+                            "lineNumber": 17,
+                            "executionCount": 39,
+                            "name": "closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> () in NetworkUsage.UsagePresenter.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 18
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 18,
+                            "executionCount": 139,
+                            "name": "closure #1 (NetworkUsage.Models.UsageRecord) -> NetworkUsage.UsageTableViewCellVM in closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> () in NetworkUsage.UsagePresenter.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 20,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.Double in closure #1 (NetworkUsage.Models.UsageRecord) -> NetworkUsage.UsageTableViewCellVM in closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> () in NetworkUsage.UsagePresenter.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 21,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () throws -> Swift.Int in closure #1 (NetworkUsage.Models.UsageRecord) -> NetworkUsage.UsageTableViewCellVM in closure #1 (Swift.Array<NetworkUsage.Models.UsageRecord>) -> () in NetworkUsage.UsagePresenter.present(records: Swift.Array<Swift.Array<NetworkUsage.Models.UsageRecord>>) -> ()",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 39,
+                            "executionCount": 1,
+                            "name": "NetworkUsage.UsagePresenter.showAlert(title: Swift.String, message: Swift.String) -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 43,
+                            "executionCount": 6,
+                            "name": "NetworkUsage.UsagePresenter.showLoading() -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 47,
+                            "executionCount": 5,
+                            "name": "NetworkUsage.UsagePresenter.hideLoading() -> ()",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "UsagePresenter.swift",
+                    "executableLines": 60
+                },
+                {
+                    "coveredLines": 22,
+                    "lineCoverage": 0.88,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/views\/cells\/UsageTableViewCell.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 13,
+                            "lineCoverage": 1,
+                            "lineNumber": 18,
+                            "executionCount": 100,
+                            "name": "NetworkUsage.UsageTableViewCell.vm.didset : Swift.Optional<NetworkUsage.UsageTableViewCellVM>",
+                            "executableLines": 13
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 20,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.String in NetworkUsage.UsageTableViewCell.vm.didset : Swift.Optional<NetworkUsage.UsageTableViewCellVM>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 21,
+                            "executionCount": 0,
+                            "name": "implicit closure #2 () throws -> Swift.Bool in NetworkUsage.UsageTableViewCell.vm.didset : Swift.Optional<NetworkUsage.UsageTableViewCellVM>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 24,
+                            "executionCount": 0,
+                            "name": "implicit closure #3 () throws -> Swift.Bool in NetworkUsage.UsageTableViewCell.vm.didset : Swift.Optional<NetworkUsage.UsageTableViewCellVM>",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 1,
+                            "lineNumber": 33,
+                            "executionCount": 41,
+                            "name": "NetworkUsage.UsageTableViewCell.awakeFromNib() -> ()",
+                            "executableLines": 4
+                        },
+                        {
+                            "coveredLines": 5,
+                            "lineCoverage": 1,
+                            "lineNumber": 38,
+                            "executionCount": 159,
+                            "name": "NetworkUsage.UsageTableViewCell.setSelected(_: Swift.Bool, animated: Swift.Bool) -> ()",
+                            "executableLines": 5
+                        }
+                    ],
+                    "name": "UsageTableViewCell.swift",
+                    "executableLines": 25
+                },
+                {
+                    "coveredLines": 3,
+                    "lineCoverage": 1,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/URLSessionProtocol.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 27,
+                            "executionCount": 7,
+                            "name": "(extension in NetworkUsage):__C.NSURLSession.dataTask(with: Foundation.URLRequest, completionHandler: (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> ()) -> NetworkUsage.URLSessionDataTaskProtocol",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "URLSessionProtocol.swift",
+                    "executableLines": 3
+                },
+                {
+                    "coveredLines": 40,
+                    "lineCoverage": 0.90909090909090906,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/Models\/UsageResponse.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 11,
+                            "lineCoverage": 0.84615384615384615,
+                            "lineNumber": 29,
+                            "executionCount": 24,
+                            "name": "",
+                            "executableLines": 13
+                        },
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 1,
+                            "lineNumber": 59,
+                            "executionCount": 8,
+                            "name": "",
+                            "executableLines": 7
+                        },
+                        {
+                            "coveredLines": 12,
+                            "lineCoverage": 0.92307692307692313,
+                            "lineNumber": 84,
+                            "executionCount": 8,
+                            "name": "",
+                            "executableLines": 13
+                        },
+                        {
+                            "coveredLines": 10,
+                            "lineCoverage": 0.90909090909090906,
+                            "lineNumber": 109,
+                            "executionCount": 8,
+                            "name": "",
+                            "executableLines": 11
+                        }
+                    ],
+                    "name": "UsageResponse.swift",
+                    "executableLines": 44
+                },
+                {
+                    "coveredLines": 3,
+                    "lineCoverage": 1,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/URLStrings.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 3,
+                            "lineCoverage": 1,
+                            "lineNumber": 18,
+                            "executionCount": 11,
+                            "name": "static NetworkUsage.URLs.constructURL(path: Swift.String) -> Swift.Optional<Foundation.URL>",
+                            "executableLines": 3
+                        }
+                    ],
+                    "name": "URLStrings.swift",
+                    "executableLines": 3
+                },
+                {
+                    "coveredLines": 101,
+                    "lineCoverage": 0.89380530973451322,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/CoreDataStore.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 17,
+                            "executionCount": 2,
+                            "name": "",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 4,
+                            "lineCoverage": 0.80000000000000004,
+                            "lineNumber": 19,
+                            "executionCount": 2,
+                            "name": "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional<Swift.Error>) -> () in NetworkUsage.CoreDataStore.() -> NetworkUsage.CoreDataStore(in _0F60FFC686C1B8FA934D95FA877DAE67).init() -> NetworkUsage.CoreDataStore",
+                            "executableLines": 5
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 21,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () -> Swift.String in closure #1 (__C.NSPersistentStoreDescription, Swift.Optional<Swift.Error>) -> () in NetworkUsage.CoreDataStore.() -> NetworkUsage.CoreDataStore(in _0F60FFC686C1B8FA934D95FA877DAE67).init() -> NetworkUsage.CoreDataStore",
+                            "executableLines": 1
+                        },
+                        {
+                            "coveredLines": 17,
+                            "lineCoverage": 0.89473684210526316,
+                            "lineNumber": 45,
+                            "executionCount": 8,
+                            "name": "NetworkUsage.CoreDataStore.save(records: Swift.Array<NetworkUsage.Models.UsageRecord>) throws -> ()",
+                            "executableLines": 19
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 1,
+                            "lineNumber": 48,
+                            "executionCount": 197,
+                            "name": "closure #1 (NetworkUsage.Models.UsageRecord) -> () in NetworkUsage.CoreDataStore.save(records: Swift.Array<NetworkUsage.Models.UsageRecord>) throws -> ()",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 19,
+                            "lineCoverage": 0.90476190476190477,
+                            "lineNumber": 65,
+                            "executionCount": 2,
+                            "name": "NetworkUsage.CoreDataStore.retrieveAllRecords() throws -> Swift.Array<NetworkUsage.Models.UsageRecord>",
+                            "executableLines": 21
+                        },
+                        {
+                            "coveredLines": 7,
+                            "lineCoverage": 0.875,
+                            "lineNumber": 71,
+                            "executionCount": 9,
+                            "name": "closure #1 (Any) throws -> () in NetworkUsage.CoreDataStore.retrieveAllRecords() throws -> Swift.Array<NetworkUsage.Models.UsageRecord>",
+                            "executableLines": 8
+                        },
+                        {
+                            "coveredLines": 16,
+                            "lineCoverage": 0.88888888888888884,
+                            "lineNumber": 87,
+                            "executionCount": 9,
+                            "name": "NetworkUsage.CoreDataStore.deleteAllRecords() throws -> ()",
+                            "executableLines": 18
+                        },
+                        {
+                            "coveredLines": 6,
+                            "lineCoverage": 0.8571428571428571,
+                            "lineNumber": 92,
+                            "executionCount": 197,
+                            "name": "closure #1 (Any) throws -> () in NetworkUsage.CoreDataStore.deleteAllRecords() throws -> ()",
+                            "executableLines": 7
+                        },
+                        {
+                            "coveredLines": 16,
+                            "lineCoverage": 0.88888888888888884,
+                            "lineNumber": 108,
+                            "executionCount": 9,
+                            "name": "NetworkUsage.Models.UsageRecord.init(managedObject: __C.NSManagedObject) throws -> NetworkUsage.Models.UsageRecord",
+                            "executableLines": 18
+                        }
+                    ],
+                    "name": "CoreDataStore.swift",
+                    "executableLines": 113
+                },
+                {
+                    "coveredLines": 71,
+                    "lineCoverage": 0.81609195402298851,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/UsageView\/workers\/UsageAPIWorker.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 6,
+                            "lineCoverage": 1,
+                            "lineNumber": 25,
+                            "executionCount": 5,
+                            "name": "",
+                            "executableLines": 6
+                        },
+                        {
+                            "coveredLines": 13,
+                            "lineCoverage": 1,
+                            "lineNumber": 32,
+                            "executionCount": 11,
+                            "name": "NetworkUsage.UsageAPIWorker.(constructURLs in _D7B504A593F87DB8F3940A7717B32F1B)() -> ()",
+                            "executableLines": 13
+                        },
+                        {
+                            "coveredLines": 31,
+                            "lineCoverage": 0.93939393939393945,
+                            "lineNumber": 47,
+                            "executionCount": 8,
+                            "name": "NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 33
+                        },
+                        {
+                            "coveredLines": 15,
+                            "lineCoverage": 0.68181818181818177,
+                            "lineNumber": 57,
+                            "executionCount": 6,
+                            "name": "closure #1 (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 22
+                        },
+                        {
+                            "coveredLines": 6,
+                            "lineCoverage": 1,
+                            "lineNumber": 61,
+                            "executionCount": 6,
+                            "name": "closure #1 () -> () in closure #1 (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 6
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 68,
+                            "executionCount": 0,
+                            "name": "closure #2 () -> () in closure #1 (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 73,
+                            "executionCount": 0,
+                            "name": "closure #3 () -> () in closure #1 (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 3
+                        },
+                        {
+                            "coveredLines": 0,
+                            "lineCoverage": 0,
+                            "lineNumber": 74,
+                            "executionCount": 0,
+                            "name": "implicit closure #1 () throws -> Swift.String in closure #3 () -> () in closure #1 (Swift.Optional<Foundation.Data>, Swift.Optional<__C.NSURLResponse>, Swift.Optional<Swift.Error>) -> () in NetworkUsage.UsageAPIWorker.fetchUsageData(completionHandler: (Swift.Optional<NetworkUsage.Models.UsageResponse>, Swift.Optional<Swift.Error>) -> ()) throws -> ()",
+                            "executableLines": 1
+                        }
+                    ],
+                    "name": "UsageAPIWorker.swift",
+                    "executableLines": 87
+                },
+                {
+                    "coveredLines": 45,
+                    "lineCoverage": 0.83333333333333337,
+                    "path": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/Network usage\/Models\/Models.swift",
+                    "functions": [
+                        {
+                            "coveredLines": 10,
+                            "lineCoverage": 0.83333333333333337,
+                            "lineNumber": 18,
+                            "executionCount": 387,
+                            "name": "",
+                            "executableLines": 12
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 0.80000000000000004,
+                            "lineNumber": 31,
+                            "executionCount": 124,
+                            "name": "NetworkUsage.Models.AnyValue.stringValue.getter : Swift.String",
+                            "executableLines": 10
+                        },
+                        {
+                            "coveredLines": 8,
+                            "lineCoverage": 0.80000000000000004,
+                            "lineNumber": 42,
+                            "executionCount": 124,
+                            "name": "NetworkUsage.Models.AnyValue.numericValue.getter : Swift.Optional<Swift.Double>",
+                            "executableLines": 10
+                        },
+                        {
+                            "coveredLines": 19,
+                            "lineCoverage": 0.86363636363636365,
+                            "lineNumber": 57,
+                            "executionCount": 151,
+                            "name": "",
+                            "executableLines": 22
+                        }
+                    ],
+                    "name": "Models.swift",
+                    "executableLines": 54
+                }
+            ],
+            "name": "NetworkUsage.app",
+            "executableLines": 810,
+            "buildProductPath": "\/Users\/v.a.jayachandran\/Documents\/projects\/Network usage\/build\/Build\/Products\/Debug-iphonesimulator\/NetworkUsage.app\/NetworkUsage"
+        }
+    ],
+    "executableLines": 1056
+}
