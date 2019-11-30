@@ -16,7 +16,16 @@ public class AlertSystem: UIViewController {
     public static func alert(title: String?, message: String?) {
         alertVC?.dismiss(animated: false, completion: nil)
 
-        window = UIWindow(frame: UIScreen.main.bounds)
+        if #available(iOS 13, *) {
+            if let scene = UIApplication.shared.connectedScenes.filter ({ $0.activationState == .foregroundActive }).first as? UIWindowScene {
+                window = UIWindow(windowScene: scene)
+            } else {
+                print("ERROR FINDING FOREGROUND SCENE")
+            }
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+        }
+
         let viewController = UIViewController()
 
         let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)

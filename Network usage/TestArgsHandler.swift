@@ -11,9 +11,7 @@ import Foundation
 class TestArgsHandler {
     static func handleTestArgs() {
         if ProcessInfo.processInfo.arguments.contains(LaunchArgs.testAlert) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                AlertSystem.alert(title: "tst", message: "alert")
-            }
+            AlertSystem.alert(title: "tst", message: "alert")
         }
     }
 }
