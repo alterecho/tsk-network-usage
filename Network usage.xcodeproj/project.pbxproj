@@ -82,7 +82,7 @@
 		F12C89572384268200B2F68C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = "Network Usage/Strings.swift"; sourceTree = SOURCE_ROOT; };
 		F12C895A238428E900B2F68C /* NetworkUsage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkUsage.xcdatamodel; sourceTree = "<group>"; };
 		F12C895C23842A5300B2F68C /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = "Network usage/CoreDataStore.swift"; sourceTree = SOURCE_ROOT; };
-		F12C9042237A6A9F00582B05 /* NetworkUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12C9042237A6A9F00582B05 /* NetworkUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NetworkUsage.app; path = "/Users/v.a.jayachandran/Documents/projects/tsk-network-usage/build/Debug-iphoneos/NetworkUsage.app"; sourceTree = "<absolute>"; };
 		F12C9044237A6A9F00582B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F12C904B237A6A9F00582B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F12C904D237A6AA000582B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,7 +153,6 @@
 		F12C8FC523785D5100582B05 = {
 			isa = PBXGroup;
 			children = (
-				F12C9042237A6A9F00582B05 /* NetworkUsage.app */,
 				F12C9043237A6A9F00582B05 /* Network Usage */,
 				F165E47C237AA0DD00CC87AA /* NetworkUsageTests */,
 				F1F6EADC238835B10034C68D /* NetworkUsageUITests */,
@@ -721,6 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vjc.NetworkUsageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -741,6 +741,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vjc.NetworkUsageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
