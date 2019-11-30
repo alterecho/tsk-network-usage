@@ -82,7 +82,6 @@
 		F12C89572384268200B2F68C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = "Network Usage/Strings.swift"; sourceTree = SOURCE_ROOT; };
 		F12C895A238428E900B2F68C /* NetworkUsage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkUsage.xcdatamodel; sourceTree = "<group>"; };
 		F12C895C23842A5300B2F68C /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = "Network usage/CoreDataStore.swift"; sourceTree = SOURCE_ROOT; };
-		F12C9042237A6A9F00582B05 /* NetworkUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NetworkUsage.app; path = "/Users/v.a.jayachandran/Documents/projects/tsk-network-usage/build/Debug-iphoneos/NetworkUsage.app"; sourceTree = "<absolute>"; };
 		F12C9044237A6A9F00582B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F12C904B237A6A9F00582B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F12C904D237A6AA000582B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		F1516D9F2380343700737F83 /* NetworkUsageTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUsageTestCase.swift; sourceTree = "<group>"; };
 		F1516DA223803E0E00737F83 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
 		F1516DA423803FF900737F83 /* UsagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagePresenterTests.swift; sourceTree = "<group>"; };
+		F158525B239276C700D1A25C /* NetworkUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F165E47F237AA0DD00CC87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17853742380F978008C5EC0 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
 		F1785380238106B9008C5EC0 /* UsageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsageTableViewCell.xib; path = "Network usage/UsageView/views/cells/UsageTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -158,6 +158,7 @@
 				F1F6EADC238835B10034C68D /* NetworkUsageUITests */,
 				F1B2668D2388E37000706172 /* NetworkUsageTests.xctest */,
 				F1B2668E2388E37000706172 /* NetworkUsageUITests.xctest */,
+				F158525B239276C700D1A25C /* NetworkUsage.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,7 +302,7 @@
 			);
 			name = NetworkUsage;
 			productName = "Network Usage";
-			productReference = F12C9042237A6A9F00582B05 /* NetworkUsage.app */;
+			productReference = F158525B239276C700D1A25C /* NetworkUsage.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F165E47A237AA0DD00CC87AA /* NetworkUsageTests */ = {
@@ -712,7 +713,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkUsageUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,7 +734,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkUsageUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

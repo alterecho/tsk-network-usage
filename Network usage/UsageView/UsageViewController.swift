@@ -20,7 +20,7 @@ class UsageViewController: UIViewController {
             vm?.tableSections.forEach({ (section) in
                 section.vms.forEach { (vm) in
                     if vm.isDecreaseOverPreviousQuarter {
-                        print("isDecreaseOverPreviousQuarter")
+//                        print("isDecreaseOverPreviousQuarter")
                     }
                 }
             })
