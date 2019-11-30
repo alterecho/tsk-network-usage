@@ -15,16 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        handleTestArgs()
+        TestArgsHandler.handleTestArgs()
         return true
     }
-}
 
-extension AppDelegate {
-    func handleTestArgs() {
-        if ProcessInfo.processInfo.arguments.contains(LaunchArgs.testAlert) {
-            AlertSystem.alert(title: "tst", message: "alert")
-        }
+    @available(iOS 13.0, *)
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        return UISceneConfiguration(name: "default", sessionRole: connectingSceneSession.role)
     }
 }
-

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F10FF6A2237A941A006F0E31 /* URLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FF6A1237A941A006F0E31 /* URLStrings.swift */; };
+		F120065623925D0D0075BC68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120065523925D0D0075BC68 /* SceneDelegate.swift */; };
+		F1200697239266E50075BC68 /* TestArgsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1200696239266E50075BC68 /* TestArgsHandler.swift */; };
 		F12C89582384268200B2F68C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C89572384268200B2F68C /* Strings.swift */; };
 		F12C895B238428E900B2F68C /* NetworkUsage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12C8959238428E900B2F68C /* NetworkUsage.xcdatamodeld */; };
 		F12C895D23842A5300B2F68C /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C895C23842A5300B2F68C /* CoreDataStore.swift */; };
@@ -75,6 +77,8 @@
 /* Begin PBXFileReference section */
 		F10FF6A1237A941A006F0E31 /* URLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLStrings.swift; path = "Network usage/URLStrings.swift"; sourceTree = SOURCE_ROOT; };
 		F10FF6A3237A9829006F0E31 /* DecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
+		F120065523925D0D0075BC68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "Network usage/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
+		F1200696239266E50075BC68 /* TestArgsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestArgsHandler.swift; path = "Network usage/TestArgsHandler.swift"; sourceTree = SOURCE_ROOT; };
 		F12C89572384268200B2F68C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = "Network Usage/Strings.swift"; sourceTree = SOURCE_ROOT; };
 		F12C895A238428E900B2F68C /* NetworkUsage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkUsage.xcdatamodel; sourceTree = "<group>"; };
 		F12C895C23842A5300B2F68C /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = "Network usage/CoreDataStore.swift"; sourceTree = SOURCE_ROOT; };
@@ -164,6 +168,8 @@
 				F12C907D237A6C4000582B05 /* json */,
 				F12C907B237A6C3400582B05 /* Safari - 10 Nov 2019 at 2248.pdf */,
 				F12C9044237A6A9F00582B05 /* AppDelegate.swift */,
+				F1200696239266E50075BC68 /* TestArgsHandler.swift */,
+				F120065523925D0D0075BC68 /* SceneDelegate.swift */,
 				F1B2668F2388ED9900706172 /* LaunchArgs.swift */,
 				F1B266932388F54B00706172 /* AccessibilityIdentifiers.swift */,
 				F12C895C23842A5300B2F68C /* CoreDataStore.swift */,
@@ -434,10 +440,12 @@
 				F1A1ED86237C0273003CFF99 /* Errors.swift in Sources */,
 				F145E1092387522E00F1029D /* URLSessionProtocol.swift in Sources */,
 				F1516D9C237EB72400737F83 /* AlertSystem.swift in Sources */,
+				F120065623925D0D0075BC68 /* SceneDelegate.swift in Sources */,
 				F1A1ED8C237C0355003CFF99 /* UsageResponse.swift in Sources */,
 				F1A1ED9B237C555F003CFF99 /* UsageViewController.swift in Sources */,
 				F1A1ED80237BFEAF003CFF99 /* UsageInteractor.swift in Sources */,
 				F12C895B238428E900B2F68C /* NetworkUsage.xcdatamodeld in Sources */,
+				F1200697239266E50075BC68 /* TestArgsHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
